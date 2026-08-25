@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-bright: #F8FAFC;
+  --color-on-secondary-container: #6B7280;
+  --color-surface-container: #FFFFFF;
+  --color-on-background: #111827;
+  --color-surface-variant: #E5E7EB;
+  --color-on-surface: #111827;
+  --color-secondary-fixed: #EFF6FF;
+  --color-primary: #2563EB;
+  --color-primary-container: #EFF6FF;
+  --color-surface-container-high: #F8FAFC;
+  --color-surface-dim: #F8FAFC;
+  --color-tertiary: #F97316;
+  --color-outline: #D1D5DB;
+  --color-tertiary-container: #EFF6FF;
+  --color-secondary: #1E3A8A;
+  --color-on-primary-container: #2563EB;
+  --color-outline-variant: #E5E7EB;
+  --color-background: #F8FAFC;
+  --color-primary-fixed: #EFF6FF;
+  --color-surface: #FFFFFF;
+  --color-on-error: #ffffff;
+
+  --spacing-margin-desktop: 40px;
+  --spacing-stack-sm: 12px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-container-max: 1280px;
+  --spacing-stack-md: 24px;
+  --spacing-stack-lg: 48px;
+  --spacing-base: 8px;
+
+  --font-headline-md: "Quicksand", sans-serif;
+  --font-headline-lg: "Quicksand", sans-serif;
+  --font-label-md: "Plus Jakarta Sans", sans-serif;
+  --font-display-lg: "Quicksand", sans-serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.03em;
+  --text-label-sm--font-weight: 700;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--font-weight: 700;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-md--font-weight: 600;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --animate-pop: pop 0.3s ease-out forwards;
+
+  @keyframes pop {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+  }
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--color-surface-bright);
+    color: var(--color-on-background);
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 50%, #0F172A 100%);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .sticker-shadow {
+    box-shadow: 0 8px 30px rgba(224, 242, 254, 0.5);
+  }
+  .category-circle img {
+    transition: transform 0.3s ease;
+  }
+  .category-circle:hover img {
+    transform: scale(1.1) rotate(5deg);
+  }
+}

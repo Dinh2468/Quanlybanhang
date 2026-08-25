@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Visual Studio
+.vs/
+bin/
+obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Large files
+full.zip
+*.zip
+
+# Mac
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Secrets
+client_secret_*.json

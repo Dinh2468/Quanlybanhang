@@ -1,0 +1,3150 @@
+TRƯỜNG ĐẠI HỌC CÔNG NGHỆ SÀI GÒN
+
+KHOA CÔNG NGHỆ THÔNG TIN
+
+---oOo---
+
+LUẬN VĂN TỐT NGHIỆP
+
+Tên đề tài:
+
+XÂY DỰNG WEBSITE BÁN DỤNG CỤ HỌC TẬP
+
+Người hướng dẫn: ThS. TRỊNH THANH DUY
+
+Sinh viên thực hiện: TRƯƠNG NGỌC ĐỈNH
+
+TP. HỒ CHÍ MINH - NĂM 2026
+
+LỜI CẢM ƠN
+
+Trong suốt thời gian học tập và rèn luyện tại Trường Đại học Công nghệ Sài Gòn (STU), em đã nhận được sự dạy bảo tận tình của các Quý thầy cô thuộc khoa Công nghệ Thông tin. Những kiến thức quý báu đó đã trở thành nền tảng giúp em hoàn thành đồ án này.
+
+Em xin gửi lời tri ân chân thành nhất đến Thầy Trịnh Thanh Duy – giảng viên hướng dẫn trực tiếp đồ án môn học "Đồ án chuyên ngành". Trong suốt quá trình thực hiện đề tài "Xây dựng Website bán dụng cụ học tập trực tuyến", Thầy không chỉ là người truyền đạt kiến thức, định hướng giải pháp kỹ thuật mà còn luôn tận tình theo sát, động viên và giúp đỡ em tháo gỡ những vướng mắc khó khăn trong việc xây dựng hệ thống quản lý bán hàng.
+
+Em cũng xin gửi lời cảm ơn sâu sắc tới gia đình và bạn bè – những người đã luôn ở bên cạnh ủng hộ và tạo điều kiện tốt nhất để em tập trung hoàn thành đồ án này.
+
+Mặc dù đã cố gắng nỗ lực để hoàn thành tốt nhất các mục tiêu đề ra, nhưng do kiến thức và kinh nghiệm thực tế còn hạn chế, đồ án chắc chắn không tránh khỏi những thiếu sót. Em rất mong nhận được những ý kiến đóng góp quý báu từ các Quý thầy cô để hệ thống của em ngày càng hoàn thiện hơn.
+
+Em xin chân thành cảm ơn!
+
+MỤC LỤC
+
+Chương 1. GIỚI THIỆU2
+
+1.1. ĐẶT VẤN ĐỀ, MỤC TIÊU LUẬN VĂN2
+
+1.1.1. Giới thiệu bối cảnh chung của xã hội2
+
+1.1.2. Sự phát triển của công nghệ2
+
+1.2. NHỮNG THÁCH THỨC CẦN GIẢI QUYẾT3
+
+1.2.1. Thách thức về mặt kỹ thuật3
+
+1.2.2. Thách thức về mặt nghiệp vụ4
+
+1.2.3. Mục tiêu của đề tài5
+
+1.3. NỘI DUNG, PHẠM VI THỰC HIỆN5
+
+1.3.1. Nội dung thực hiện5
+
+1.3.2. Phạm vi thực hiện6
+
+1.4. KẾT QUẢ CẦN ĐẠT8
+
+Chương 2. PHƯƠNG PHÁP THỰC HIỆN11
+
+2.1. CÁC HỆ THỐNG TƯƠNG TỰ11
+
+2.1.1. Hệ thống11
+
+2.1.2. Giao diện admin15
+
+2.2. CÔNG NGHỆ SỬ DỤNG19
+
+2.2.1. Ngôn ngữ lập trình và Công nghệ Web19
+
+2.2.2. Hệ quản trị cơ sở dữ liệu20
+
+2.2.3. Môi trường phát triển và Công cụ hỗ trợ20
+
+2.3. PHÂN TÍCH YÊU CẦU20
+
+2.3.1. Các quy trình, nghiệp vụ20
+
+2.3.2. Sơ đồ chức năng23
+
+2.3.3. Sơ đồ Use case tổng quát24
+
+Chương 3. THIẾT KẾ26
+
+3.1. MÔ HÌNH DỮ LIỆU26
+
+3.1.1. Mô hình thực thể mối quan hệ26
+
+3.1.2. Các bảng dữ liệu28
+
+3.2. MÔ HÌNH XỬ LÝ34
+
+3.2.1. Use case chi tiết34
+
+3.2.2. Sơ đồ tuần tự42
+
+3.2.3. Sơ đồ hoạt động (activity)47
+
+3.3. HỆ THỐNG MÀN HÌNH48
+
+3.3.1. Giao diện dành cho Khách hàng48
+
+3.3.2. Giao diện dành cho Quản trị (Admin/Nhân viên)54
+
+3.3.3. Các màn hình chức năng khác58
+
+3.4. HỆ THỐNG BÁO BIỂU61
+
+3.4.1. Báo cáo Doanh thu61
+
+3.4.2. Báo cáo Sản phẩm bán chạy61
+
+3.4.3. Báo cáo Nhập hàng và Tồn kho62
+
+3.4.4. Hình thức hiển thị báo cáo62
+
+Chương 4. THỬ NGHIỆM63
+
+4.1. CÁC KỊCH BẢN THỬ NGHIỆM63
+
+4.2. KẾT QUẢ THỬ NGHIỆM CÁC KỊCH BẢN69
+
+4.3. XỬ LÝ CÁC TRƯỜNG HỢP NGOẠI LỆ70
+
+4.3.1. Ngoại lệ do dữ liệu đầu vào không hợp lệ70
+
+4.3.2. Ngoại lệ về xác thực và phân quyền71
+
+4.3.3. Ngoại lệ ảnh hưởng đến toàn vẹn dữ liệu (Transaction)71
+
+4.3.4. Ngoại lệ từ dịch vụ/hệ thống bên ngoài71
+
+Chương 5. KẾT LUẬN73
+
+5.1. KẾT QUẢ ĐỐI CHIẾU VỚI MỤC TIÊU73
+
+5.2. CÁC VẤN ĐỀ CÒN TỒN ĐỌNG73
+
+5.3. MỞ RỘNG (HƯỚNG PHÁT TRIỂN)74
+
+MỤC LỤC HÌNH
+
+Hình 2-1 : Giao diện trang chủ11
+
+Hình 2-2 : Giao diện trang sản phẩm12
+
+Hình 2-3 : Giao diện trang sản phẩm khuyến mãi12
+
+Hình 2-4 : Giao diện giỏ hàng13
+
+Hình 2-5 : Giao diện trang đăng nhập13
+
+Hình 2-6 : Giao diện đăng ký14
+
+Hình 2-7 : Giao diện danh mục sản phẩm14
+
+Hình 2-8 : Giao diện đăng nhập16
+
+Hình 2-9 : Giao diện trang admin16
+
+Hình 2-10 : Giao diện trang quản lý đơn hàng17
+
+Hình 2-11 : Giao diện trang quản lý sản phẩm17
+
+Hình 2-12 : Giao diện trang quản lý khách hàng18
+
+Hình 2-13 : Giao diện trang báo cáo18
+
+Hình 2-14 : Quy trình đăng nhập và đăng ký21
+
+Hình 2-15 : Quy trình Tìm kiếm và Mua hàng22
+
+Hình 2-16 : Quy trình Quản lý và Xử lý đơn hàng22
+
+Hình 2-17 : Quy trình Nhập hàng23
+
+Hình 2-18 : Quy trình Thống kê và Báo cáo23
+
+Hình 2-19 : Sơ đồ chức năng23
+
+Hình 2-20 : Sơ đồ Use case tổng quát24
+
+Hình 3-1  Sơ đồ ERD tổng quát27
+
+Hình 3-2 : Sơ đồ Use Case chi tiết Đăng nhập34
+
+Hình 3-3 : Sơ đồ Use Case chi tiết: Đặt hàng và Thanh toán online36
+
+Hình 3-4 : Sơ đồ Use Case chi tiết: Tìm kiếm & Lọc sản phẩm38
+
+Hình 3-5 : Sơ đồ Use Case chi tiết: Quản lý sản phẩm39
+
+Hình 3-6 :Sơ đồ Use Case chi tiết: Xem Thống kê & Doanh thu40
+
+Hình 3-7 : Sơ đồ tuần tự đăng nhập42
+
+Hình 3-8 : Sơ đồ tuần tự Đặt hàng và Thanh toán online43
+
+Hình 3-9 : Sơ đồ tuần tự Tìm kiếm & Lọc sản phẩm44
+
+Hình 3-10 : Sơ đồ tuần tự Quản lý thông tin sản phẩm45
+
+Hình 3-11 : Sơ đồ tuần tự Xem Thống kê & Doanh thu46
+
+Hình 3-12 : Sơ đồ hoạt động đặt hàng và thanh toán47
+
+Hình 3-13 : Giao diện Trang chủ48
+
+Hình 3-14 : Giao diện Trang sản phẩm 49
+
+Hình 3-15 : Giao diện Trang chi tiết sản phẩm50
+
+Hình 3-16 : Giao diện Giỏ hàng51
+
+Hình 3-17 : Giao diện Thanh toán52
+
+Hình 3-18 : Giao diện Trang Hồ sơ cá nhân 52
+
+Hình 3-19 : Giao diện Trang Lịch sử đơn hàng  53
+
+Hình 3-20 : Giao diện Trang Dashboard 54
+
+Hình 3-21 : Giao diện Trang Quản lý Sản Phẩm55
+
+Hình 3-22 : Giao diện Trang Quản lý Đơn hàng55
+
+Hình 3-23 : Giao diện Quản lý Nhập hàng56
+
+Hình 3-24 : Giao diện trang Quản lý Khách hàng56
+
+Hình 3-25 : Giao diện trang Quản lý Nhân viên57
+
+Hình 3-26 : Giao diện Đăng nhập58
+
+Hình 3-27 : Giao diện Đăng ký59
+
+Hình 3-28 : Giao diện quên mật khẩu60
+
+Hình 3-29 : Giao diện hệ thống báo biểu 61
+
+MỤC LỤC BẢNG BIỂU
+
+Bảng 1-1  Kết quả cần đạt10
+
+Bảng 2-1 : Bảng đặt tả use case tổng quan25
+
+Bảng 3-1  Đặc tả khách hàng28
+
+Bảng 3-2  Đặc tả sản phẩm28
+
+Bảng 3-3  Đặc tả đơn hàng29
+
+Bảng 3-4  Đặc tả tài khoản30
+
+Bảng 3-5  Đặc tả chi tiết đơn hàng30
+
+Bảng 3-6  Đặc tả nhân viên30
+
+Bảng 3-7  Đặc tả nhà cung cấp31
+
+Bảng 3-8  Đặc tả nhập hàng31
+
+Bảng 3-9  Đặc tả thương hiệu31
+
+Bảng 3-10  Đặc tả đánh giá31
+
+Bảng 3-11  Đặc tả khuyến mãi 32
+
+Bảng 3-12  Đặc tả loại sản phẩm32
+
+Bảng 3-13  Đặc tả giỏ hàng32
+
+Bảng 3-14  Đặc tả chi tiêt giỏ hàng33
+
+Bảng 3-15  Đặc tả chi tiết nhập hàng33
+
+Bảng 3-16  Đặc tả sản phẩm - khuyến mãi33
+
+Bảng 3-17  Đặt tả hạng khách hàng33
+
+Bảng 3-18 : Đặc tả phương thức thanh toán34
+
+Bảng 3-19 : Đặc tả sản phẩm yêu thích 34
+
+Bảng 3-20 : Bảng Đặc tả Use case chi tiết Đăng nhập 35
+
+Bảng 3-21 : Bảng Đặc tả Use case chi tiết Đặt hàng và Thanh toán online37
+
+Bảng 3-22 : Bảng Đặc tả Use case chi tiết Tìm kiếm & Lọc sản phẩm39
+
+Bảng 3-23 : Bảng Đặc tả Use case chi tiết Quản lý sản phẩm40
+
+Bảng 3-24 : Bảng Đặc tả Use case chi tiết Xem Thống kê & Doanh thu42
+
+Bảng 4-1 : Bảng Kịch bản kiểm thử chức năng Đăng ký & Đăng nhập64
+
+Bảng 4-2 : Bảng Kịch bản kiểm thử chức năng Tìm kiếm, Thêm vào giỏ hàng.64
+
+Bảng 4-3 : Bảng Kịch bản kiểm thử chức năng Đặt hàng và Thanh toán65
+
+Bảng 4-4 : Bảng Kịch bản kiểm thử chức năng Quản lý danh mục66
+
+Bảng 4-5 : Bảng Kịch bản kiểm thử chức năng Xử lý đơn hàng, Nhập hàng 67
+
+Bảng 4-6 : Bảng Kịch bản kiểm thử chức năng Quản lý nhân viên và Thống kê69
+
+Bảng 4-7 : Bảng kết quả kiểm thử chức năng Đăng ký & Đăng nhập69
+
+Bảng 4-8 : Bảng kết quả kiểm thử chức năng Tìm kiếm, Thêm vào giỏ hàng.69
+
+Bảng 4-9 : Bảng kết quả kiểm thử chức năng Đặt hàng và Thanh toán69
+
+Bảng 4-10 : Bảng kết quả kiểm thử chức năng Quản lý danh mục70
+
+Bảng 4-11 : Bảng kết quả kiểm thử chức năng Xử lý đơn hàng, Nhập hàng 70
+
+Bảng 4-12 : Bảng kết quả kiểm thử chức năng Quản lý nhân viên và Thống kê70
+
+Bảng 4-13 : Bảng tổng hợp xử lý các trường hợp ngoại lệ72
+
+GIỚI THIỆU
+
+ĐẶT VẤN ĐỀ, MỤC TIÊU LUẬN VĂN
+
+Giới thiệu bối cảnh chung của xã hội
+
+Bối cảnh xã hội và nhu cầu thị trường 
+
+Trong kỷ nguyên số hiện nay, sự phát triển mạnh mẽ của công nghệ thông tin và Internet đã làm thay đổi hoàn toàn hành vi mua sắm của người tiêu dùng.
+
+Thương mại điện tử trở thành một xu thế tất yếu, giúp kết nối người mua và người bán một cách nhanh chóng mà không bị giới hạn bởi khoảng cách địa lý hay thời gian.
+
+Dụng cụ học tập (bút, vở, thước, balo, máy tính,...) là những mặt hàng thiết yếu, có nhu cầu sử dụng thường xuyên và liên tục từ đối tượng học sinh, sinh viên và giáo viên.
+
+Tuy nhiên, việc mua sắm truyền thống tại các nhà sách hay cửa hàng đôi khi gây mất thời gian và khó khăn trong việc so sánh giá cả cũng như mẫu mã sản phẩm.
+
+Thực trạng tại đơn vị khai thác (Cửa hàng dụng cụ học tập)
+
+Hiện nay, nhiều cửa hàng vẫn đang duy trì phương thức quản lý thủ công hoặc bán hàng trực tiếp tại chỗ, dẫn đến những hạn chế trong việc tiếp cận khách hàng tiềm năng ở xa.
+
+Việc quản lý danh mục sản phẩm đa dạng (như các loại bút Thiên Long, máy tính Casio, balo chống gù...) và theo dõi lượng tồn kho bằng sổ sách dễ gây ra sai sót, thất thoát dữ liệu.
+
+Khó khăn trong việc thống kê doanh thu theo ngày, tháng, năm hoặc báo cáo chi tiết về tình hình nhập hàng từ các nhà cung cấp như Deli, Hồng Hà, hay Casio Bitex.
+
+Sự thiếu hụt một hệ thống tương tác trực tuyến khiến cửa hàng khó khăn trong việc triển khai các chương trình khuyến mãi và tiếp nhận đánh giá phản hồi từ khách hàng để cải thiện dịch vụ.
+
+Sự cần thiết của đề tài
+
+Từ bối cảnh trên, việc xây dựng một hệ thống website bán dụng cụ học tập trực tuyến là giải pháp cấp thiết nhằm hiện đại hóa hoạt động kinh doanh.
+
+Hệ thống không chỉ tạo điều kiện cho khách hàng dễ dàng tìm kiếm, xem chi tiết và đặt mua sản phẩm mọi lúc mọi nơi , mà còn cung cấp bộ công cụ quản trị mạnh mẽ giúp chủ cửa hàng tối ưu hóa quy trình vận hành và quản lý dữ liệu tập trung
+
+Sự phát triển của công nghệ
+
+Sự phát triển mạnh mẽ của công nghệ web hiện đại đã tạo nền tảng vững chắc cho việc triển khai các hệ thống bán hàng trực tuyến hiệu quả, mượt mà và bảo mật cao. Trọng tâm công nghệ dịch chuyển sang cấu trúc Single Page Application (SPA) kết hợp với các RESTful API mạnh mẽ. Các công nghệ then chốt cấu thành nên hệ thống bao gồm:
+
+Công nghệ Front-end (React & Tailwind CSS): Sử dụng thư viện React giúp xây dựng giao diện người dùng (UI) dạng thành phần (component-based), tối ưu hóa tốc độ kết xuất dữ liệu thông qua Virtual DOM và mang lại trải nghiệm ứng dụng mượt mà. Kết hợp với UI Framework Tailwind CSS giúp tối ưu hóa CSS theo cơ chế utility-first, tạo ra giao diện đẹp mắt, linh hoạt và dễ bảo trì.
+
+Công nghệ Back-end (C# ASP.NET 8 & EF Core 8): ASP.NET 8 là framework mã nguồn mở hiệu năng cao của Microsoft, chuyên dụng để xây dựng các API Web hiện đại, có khả năng chịu tải tốt và tính bảo mật vượt trội. Entity Framework Core (EF Core 8) đóng vai trò là một bộ ánh xạ quan hệ - đối tượng (ORM) tiên tiến, giúp đơn giản hóa việc tương tác, truy vấn và quản lý cơ sở dữ liệu dưới dạng các đối tượng lập trình.
+
+Hệ quản trị cơ sở dữ liệu SQL Server: Một hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) cấp doanh nghiệp, đảm bảo tính toàn vẹn dữ liệu cực kỳ cao, hỗ trợ xử lý các truy vấn phức tạp như danh mục sản phẩm, thông tin tài khoản, và lịch sử đơn hàng một cách nhanh chóng, an toàn.
+
+Cơ chế xác thực JWT (JSON Web Token): Đóng vai trò then chốt trong việc bảo mật hệ thống Client-Server, cho phép mã hóa thông tin người dùng dưới dạng token an toàn, hỗ trợ cơ chế phân quyền truy cập không lưu trạng thái (stateless authentication) giữa React và ASP.NET 8.
+
+Dịch vụ lưu trữ Cloudinary Cloud: Giải pháp quản lý tài nguyên đám mây chuyên nghiệp, giúp lưu trữ, tối ưu hóa và phân phối hình ảnh của các sản phẩm dụng cụ học tập với tốc độ cao.
+
+Kiến trúc Client-Server: Đây là mô hình nền tảng cho các ứng dụng web hiện nay, giúp tách biệt giữa giao diện người dùng (Client) và logic xử lý dữ liệu tại máy chủ (Server).
+
+Bảo mật dữ liệu: Sự phát triển của các thuật toán mã hóa và cơ chế ngăn chặn tấn công (như SQL Injection, XSS) trong môi trường giúp bảo vệ thông tin cá nhân và tài khoản của khách hàng an toàn hơn.
+
+NHỮNG THÁCH THỨC CẦN GIẢI QUYẾT
+
+Thách thức về mặt kỹ thuật 
+
+Quản lý kiến trúc tách biệt (Decoupled Architecture): Việc phân tách hoàn toàn giữa Front-end (React) và Back-end (ASP.NET 8 API) đòi hỏi phải xây dựng một hệ thống API RESTful đồng bộ, chuẩn hóa định dạng dữ liệu truyền tải (JSON) và kiểm soát chặt chẽ cơ chế bất đồng bộ.
+
+Bảo mật hệ thống và phân quyền không trạng thái: Tự hiện thực hóa cơ chế bảo mật nâng cao sử dụng JWT (JSON Web Token). Thách thức nằm ở việc lưu trữ token an toàn tại phía Client (tránh các lỗi bảo mật XSS, CSRF), mã hóa thông tin mật khẩu bằng các thuật toán băm bảo mật tại Back-end và thiết lập middleware phân quyền chặt chẽ cho từng Endpoint API.
+
+Tối ưu hóa luồng xử lý tệp tin và lưu trữ: Hiện thực hóa luồng xử lý ảnh đa tầng truyền qua API giữa ba thành phần (React → ASP.NET 8 → Cloudinary Cloud) một cách mượt mà , đảm bảo việc quản lý băng thông ổn định, kiểm soát dung lượng file tải lên và đồng bộ hóa URL chính xác trong SQL Server.
+
+Tối ưu hóa truy vấn cơ sở dữ liệu: Thiết lập và truy vấn các bảng dữ liệu có quan hệ phức tạp như sanpham, donhang, chitietdh, khuyenmai sao cho đảm bảo tốc độ xử lý khi dữ liệu lớn dần.
+
+Thiết kế Giao diện Web Responsive đa thiết bị: Sử dụng Tailwind CSS để cấu hình thủ công giao diện đáp ứng (Responsive Design) , đảm bảo mọi thành phần giao diện từ trang chủ, giỏ hàng, đến dashboard quản trị hiển thị đồng nhất, trực quan trên các kích thước màn hình từ smartphone đến máy tính để bàn.
+
+Thách thức về mặt nghiệp vụ
+
+Logic giỏ hàng, đặt hàng và cập nhật tồn kho theo thời gian thực: Xử lý các tình huống phức tạp trong quá trình đặt hàng để tránh lỗi Race Condition (hai người cùng mua một sản phẩm cuối cùng tại một thời điểm). Hệ thống phải đảm bảo việc tự động trừ số lượng tồn kho vật lý trong bảng dữ liệu ngay khi giao dịch thanh toán thành công, ngăn chặn tuyệt đối tình trạng "bán quá số lượng thực tế trong kho".
+
+Tích hợp cổng thanh toán trực tuyến: Hiện thực hóa luồng tích hợp với cổng thanh toán điện tử (như VNPAY), đảm bảo quy trình chuyển hướng, xác thực chữ ký bảo mật (Checksum), nhận kết quả thanh toán tự động (IPN URL) và cập nhật trạng thái đơn hàng một cách chính xác tuyệt đối.
+
+Phân quyền người dùng đa cấp: Thiết lập cơ chế kiểm tra quyền hạn chặt chẽ trên toàn hệ thống. Đảm bảo Khách hàng chỉ xem được thông tin cá nhân/đơn hàng của mình; Nhân viên chỉ có quyền thao tác quản lý kho, xử lý đơn hàng, lập phiếu nhập hàng ; trong khi Admin (Quản trị viên) giữ quyền tối cao để quản lý nhân sự, cấu hình chương trình khuyến mãi và xem biểu đồ thống kê doanh thu.
+
+Xử lý quy trình nhập hàng: Thiết kế quy trình nhập hàng từ nhà cung cấp sao cho khớp với biến động kho và đơn giá đầu vào, đảm bảo tính chính xác cho các báo cáo tài chính sau này.
+
+Tính toán khuyến mãi: Áp dụng các chương trình giảm giá vào đơn hàng một cách chính xác dựa trên các điều kiện áp dụng cụ thể
+
+Mục tiêu của đề tài
+
+Mục tiêu chính của đề tài là nghiên cứu, thiết kế và xây dựng một hệ thống website bán dụng cụ học tập trực tuyến hoàn chỉnh dựa trên kiến trúc phân tách độc lập giữa Front-end (React) và Back-end (ASP.NET 8 API) kết hợp cơ sở dữ liệu SQL Server. Hệ thống hướng tới việc thực hiện các mục tiêu cụ thể sau:
+
+Cung cấp kênh mua sắm trực tuyến tiện lợi cho đối tượng học sinh, sinh viên và giáo viên.
+
+Số hóa quy trình quản lý bán hàng, kho hàng và nhân sự cho cửa hàng.
+
+Xây dựng mô hình xử lý hình ảnh tối ưu: React gửi file ảnh qua API → ASP.NET nhận file → Đẩy file lên Cloudinary → Cloudinary trả về URL ảnh → ASP.NET lưu URL vào CSDL SQL Server và phản hồi về cho React để hiển thị trực quan lên giao diện người dùng.   
+
+Nâng cao kỹ năng lập trình web, tư duy phân tích hệ thống và quản trị cơ sở dữ liệu thực tế.
+
+NỘI DUNG, PHẠM VI THỰC HIỆN
+
+Nội dung thực hiện
+
+Khảo sát và Phân tích hệ thống: Nghiên cứu quy trình vận hành thực tế tại các nhà sách và cửa hàng văn phòng phẩm. Tiến hành khảo sát chi tiết hệ thống văn phòng phẩm hiện có (vpphongha.vn) và nền tảng quản trị Haravan để đánh giá ưu/nhược điểm làm cơ sở cải tiến.
+
+Thiết kế mô hình dữ liệu và quy trình nghiệp vụ: Xây dựng sơ đồ thực thể mối quan hệ (ERD) hoàn chỉnh cho hệ thống; đặc tả chi tiết cấu trúc các bảng vật lý trong SQL Server (Khách hàng, Sản phẩm, Tài khoản, Đơn hàng, Chi tiết đơn hàng, Khuyến mãi, Nhập hàng,...) ; vẽ các sơ đồ Use Case tổng quát/chi tiết, sơ đồ tuần tự (Sequence Diagram), sơ đồ hoạt động (Activity Diagram) cho các quy trình nghiệp vụ chính.
+
+Thiết kế giao diện: Sử dụng công cụ Figma để thiết kế giao diện Web Responsive dành cho khách hàng và trang quản trị dành cho nhân viên/admin.
+
+Lập trình phát triển ứng dụng (Coding):
+
+Back-end: Khởi tạo project ASP.NET 8 Web API, thiết lập cơ sở dữ liệu thông qua cơ chế Code-First của EF Core 8. Viết các Controller xử lý API CRUD cho danh mục, sản phẩm, người dùng, đơn đặt hàng. Tích hợp thư viện JWT để bảo mật API và Cloudinary SDK để xử lý upload ảnh. Tích hợp cổng thanh toán trực tuyến VNPAY.
+
+Front-end: Khởi tạo dự án React, dựng layout khung hệ thống (Header, Footer, Sidebar Admin) với Tailwind CSS. Sử dụng Axios/Fetch để kết nối các API Back-end, hiện thực các trang hiển thị sản phẩm, giỏ hàng, thanh toán và trang dashboard admin chứa biểu đồ thống kê doanh thu trực quan.
+
+Kiểm thử và đánh giá: Xây dựng kịch bản kiểm thử toàn diện cho tất cả các phân hệ chức năng (Đăng nhập, Tìm kiếm, Đặt hàng, Thanh toán, Thống kê). Tiến hành sửa lỗi (Fix bug), tối ưu mã nguồn và deploy ứng dụng lên các môi trường host trực tuyến (Vercel cho Frontend, Cloud Host cho Backend và Database).
+
+Phạm vi thực hiện 
+
+Đối tượng người dùng: Hệ thống được thiết kế chuyên biệt phục vụ cho 03 nhóm đối tượng bao gồm: Khách hàng (người mua dụng cụ học tập), Nhân viên cửa hàng (người xử lý vận hành kho, phiếu nhập và đơn hàng) và Quản trị viên (Admin - chủ doanh nghiệp nắm toàn quyền cấu hình ưu đãi, quản lý nhân sự và xem thống kê).
+
+Sản phẩm cung cấp: Website tập trung kinh doanh các nhóm mặt hàng dụng cụ học tập, văn phòng phẩm thiết yếu bao gồm: các loại bút viết, tập/vở học sinh, thước kẻ, dụng cụ đo, cặp sách/balo, máy tính bỏ túi (Vinacal, Casio) và đèn bàn học.
+
+Phạm vi chức năng:
+
+Phân hệ Khách hàng:
+
+Tài khoản & Cá nhân hóa: Đăng ký tài khoản (mã hóa mật khẩu), đăng nhập nhận JWT Token, quản lý và cập nhật thông tin cá nhân (Họ tên, SĐT, Địa chỉ, Email). Lịch sử tích điểm, tra cứu hạng thành viên hiện tại (Đồng, Bạc, Vàng, Bạch kim, Kim cương).
+
+Tìm kiếm & Xem sản phẩm: Tra cứu danh mục dụng cụ học tập; lọc sản phẩm theo loại, thương hiệu, khoảng giá; tìm kiếm theo từ khóa; xem chi tiết sản phẩm (giá, tồn kho, mô tả và lịch sử đánh giá).
+
+Quản lý giỏ hàng: Thêm sản phẩm; cập nhật số lượng hoặc xóa sản phẩm khỏi giỏ; hệ thống tự động tính tổng tiền theo thời gian thực dựa trên chiết khấu của hạng thành viên.
+
+Đặt hàng & Thanh toán: Nhập thông tin giao hàng; chọn phương thức thanh toán linh hoạt: COD (Thanh toán khi nhận hàng), cổng thanh toán VNPAY hoặc ví điện tử MoMo động (tự động điền số tài khoản, số tiền và nội dung chuyển khoản); theo dõi trạng thái đơn hàng (Chờ xử lý, Đang giao, Hoàn thành, Đã hủy).
+
+Tương tác công khai: Gửi đánh giá số sao (1-5 sao) và để lại bình luận đối với các sản phẩm nằm trong đơn hàng có trạng thái "Hoàn thành".
+
+Phân hệ Nhân viên:
+
+Quản lý danh mục cốt lõi: Thực hiện các thao tác CRUD (Thêm, sửa, xóa, tìm kiếm) đối với dữ liệu Loại sản phẩm, Thương hiệu và Nhà cung cấp.
+
+Quản lý thông tin sản phẩm: Tiếp nhận thông tin sản phẩm văn phòng phẩm mới, cập nhật giá bán, upload hình ảnh lên Cloudinary để lưu URL trực tiếp vào CSDL.
+
+Xử lý đơn hàng: Tiếp nhận đơn hàng mới, duyệt đơn và cập nhật trạng thái đơn hàng tuần tự (Chờ xử lý → Đang giao → Hoàn thành/Hủy); cập nhật trạng thái thanh toán ("Chưa thanh toán" → "Đã thanh toán").
+
+Quản lý nhập kho: Lập phiếu nhập hàng (chọn nhà cung cấp, nhập số lượng và giá nhập), phiếu mặc định ở trạng thái "Chờ nhận hàng". Khi hàng về, thực hiện bấm "Xác nhận nhập kho" để hệ thống kích hoạt logic tự động cộng dồn số lượng vào cột SoLuongTon của sản phẩm tương ứng.
+
+Phân hệ Admin: 
+
+Toàn quyền kiểm soát hệ thống: Có toàn bộ quyền hạn của phân hệ Nhân viên.
+
+Quản trị nhân sự & Tài khoản: Tạo tài khoản, lập hồ sơ nhân viên mới, phân cấp quyền truy cập hệ thống (Admin, Nhân viên kho, Khách hàng). Có quyền Khóa/Mở khóa tài khoản người dùng bất kỳ thông qua thuộc tính trạng thái hệ thống.
+
+Cấu hình hệ thống động: Cấu hình hệ thống Khách hàng thân thiết (thiết lập mốc điểm thăng hạng, phần trăm ưu đãi giảm giá theo từng hạng); bật/tắt hoặc thêm mới các phương thức thanh toán trực tuyến (COD, VNPAY, VietQR) hiển thị ngoài giao diện.
+
+Thống kê & Báo cáo chiến lược: Xem biểu đồ doanh thu theo ngày/tuần/tháng; nhận cảnh báo tự động khi các mặt hàng chạm mốc sắp hết kho (SoLuongTon $\approx$ 0); xem báo cáo Top sản phẩm bán chạy nhất để lập kế hoạch nhập hàng và tiếp thị.
+
+Phạm vi địa lý: Website hỗ trợ tiếp cận, phục vụ nhu cầu tra cứu và thực hiện giao dịch mua sắm trực tuyến cho khách hàng trên phạm vi toàn quốc; quy trình giao nhận hàng hóa được cấu hình vận hành tối ưu cho khu vực nội thành Thành phố Hồ Chí Minh và liên kết chuyển phát đồng bộ qua các đơn vị vận chuyển trung gian trên cả nước.
+
+Phạm vi triển khai kỹ thuật: Hệ thống áp dụng mô hình kiến trúc phân tách hoàn toàn (Decoupled Client-Server Architecture) giao tiếp độc lập qua RESTful API sử dụng định dạng dữ liệu JSON. Mã nguồn được quản lý phiên bản và lưu trữ tập trung trên nền tảng GitHub. Trong giai đoạn phát triển, hệ thống được cấu hình, vận hành và kiểm thử toàn diện trên môi trường máy chủ cục bộ (Localhost). Đối với giai đoạn nghiệm thu và đưa vào sử dụng thực tế, hệ thống được đóng gói và triển khai (deploy) đồng bộ lên môi trường Internet bao gồm: mã nguồn Front-end (React) vận hành trên nền tảng đám mây Vercel, mã nguồn Back-end (ASP.NET 8 API) kết hợp cơ sở dữ liệu hệ quản trị SQL Server được phân phối và lưu trữ trên hệ thống Cloud Host trực tuyến..
+
+KẾT QUẢ CẦN ĐẠT
+
+Mục tiêu
+
+Kết quả cần đạt
+
+Tiêu chí đánh giá
+
+Chức năng
+
+Đăng ký & Đăng nhập
+
+- Mật khẩu người dùng được mã hóa bảo mật trước khi lưu vào CSDL.
+
+- Hệ thống cấp JWT Token chính xác, lưu phiên làm việc an toàn tại Client.
+
+Quản lý thông tin cá nhân
+
+- Khách hàng cập nhật thông tin cá nhân (Họ tên, SĐT, Địa chỉ, Email) thành công và dữ liệu được đồng bộ ngay lập tức vào database.
+
+Tìm kiếm & Bộ lọc sản phẩm
+
+- Cho phép lọc dụng cụ học tập chính xác theo loại, thương hiệu và khoảng giá.
+
+- Kết quả tìm kiếm theo từ khóa hiển thị đúng trong vòng dưới 1 giây.
+
+Chi tiết sản phẩm & Đánh giá
+
+- Hiển thị đầy đủ thông tin: giá bán, số lượng tồn kho, mô tả và danh sách bình luận.
+
+- Số sao trung bình hiển thị chính xác theo thuật toán cộng dồn.
+
+Giỏ hàng trực tuyến
+
+- Thêm, sửa số lượng hoặc xóa sản phẩm trong giỏ hàng không gây lỗi logic.
+
+- Tổng tiền giỏ hàng tự động tính toán lại theo thời gian thực (Realtime).
+
+Luồng đặt hàng & Giao hàng
+
+- Tiếp nhận chính xác thông tin giao hàng và ghi chú đơn hàng của khách.
+
+- Khởi tạo đơn hàng thành công, tự động chuyển trạng thái sang "Chờ xử lý".
+
+Cổng thanh toán VNPAY
+
+- Chuyển hướng sang trang sandbox VNPAY an toàn; nhận phản hồi IPN để tự động cập nhật đơn hàng thành "Đã thanh toán" khi giao dịch thành công.
+
+Chức năng
+
+Quét mã VietQR động
+
+- Gọi API bên thứ ba hiển thị chính xác ảnh mã QR chứa sẵn số tài khoản của cửa hàng, số tiền hóa đơn và nội dung chuyển khoản là mã đơn hàng.
+
+Tích điểm & Thăng hạng tự động
+
+- Khi đơn chuyển sang "Hoàn thành", hệ thống tự đổi giá trị hóa đơn thành điểm tích lũy.
+
+- Tự động thăng hạng khách hàng lên Đồng/ Bạc/Vàng/Bạch kim/Kim cương khi đạt mốc.
+
+Áp dụng ưu đãi hạng thành viên
+
+- Hệ thống tự động kiểm tra tỷ lệ phần trăm ưu đãi của hạng hiện tại để trừ tiền trực tiếp vào tổng hóa đơn khi khách đặt hàng.
+
+Quản lý danh mục (CRUD)
+
+- Nhân viên thực hiện Thêm, Sửa, Xóa, Tìm kiếm dữ liệu Loại sản phẩm, Thương hiệu, Nhà cung cấp ổn định, không phát sinh lỗi trùng lặp khóa.
+
+Quản lý thông tin sản phẩm
+
+- Đăng tải sản phẩm mới thành công.- Luồng xử lý tệp ảnh (React → ASP.NET → Cloudinary) vận hành mượt mà, lưu trữ đúng URL ảnh vào SQL Server.
+
+Xử lý trạng thái đơn hàng
+
+- Cho phép cập nhật tuần tự và chính xác trạng thái đơn hàng (Chờ xử lý → Đang giao → Hoàn thành/Hủy) và đồng bộ đến trang theo dõi của khách.
+
+Lập và xác nhận nhập kho
+
+- Ghi nhận chính xác thông tin số lượng và giá nhập của từng mặt hàng từ nhà cung cấp.
+
+- Khi bấm "Hoàn thành" phiếu nhập, cột SoLuongTon trong bảng sản phẩm phải tự động cộng dồn chính xác.
+
+Quản lý nhân sự & Phân quyền
+
+- Admin khởi tạo tài khoản nhân viên mới và cấp quyền hạn truy cập theo chức vụ đúng phân hệ.
+
+- Chặn tuyệt đối nhân viên truy cập vào các tính năng tối cao của Admin.
+
+Chức năng
+
+Cấu hình & Khóa tài khoản
+
+- Chức năng Khóa/Mở khóa tài khoản qua cột trạng thái hoạt động ngay lập tức.
+
+- Admin thay đổi được các tham số mốc điểm và bật/tắt phương thức thanh toán.
+
+Biểu đồ doanh thu trực quan
+
+- Dashboard hiển thị đúng biểu đồ (đường/cột) phản ánh doanh số bán dụng cụ học tập theo ngày, tuần, tháng dựa trên dữ liệu hóa đơn thực tế.
+
+Thống kê kho & Top sản phẩm
+
+- Hệ thống tự động đưa ra cảnh báo hiển thị khi số lượng tồn kho của sản phẩm chạm mốc sắp hết hàng.
+
+- Xuất danh sách Top các sản phẩm bán chạy chính xác.
+
+Phi chức năng
+
+Hiệu năng
+
+- Thời gian phản hồi (Response Time) đối với các yêu cầu truy xuất API RESTful từ Back-end ASP.NET 8 phải dưới 2 giây trong điều kiện mạng bình thường.
+
+Giao diện
+
+- Giao diện sử dụng Tailwind CSS tối giản, hiện đại, thân thiện với học sinh, sinh viên; đạt độ tương thích Responsive hoàn chỉnh trên PC, Tablet và Smartphone.
+
+Tính bảo mật
+
+- API Back-end được bảo vệ nghiêm ngặt bằng JWT Middleware. Dữ liệu đầu vào từ form được filter và validate chặt chẽ ở cả 2 phía Client/Server để chống các lỗ hổng cơ bản (SQL Injection, XSS).
+
+Độ tin cậy
+
+- Cơ sở dữ liệu ràng buộc toàn vẹn khóa ngoại nghiêm ngặt.
+
+- Giải quyết triệt để lỗi Race Condition khi nhiều người dùng cùng bấm đặt mua một sản phẩm cuối cùng tại một thời điểm.
+
+Bảng 1-1 Kết quả cần đạt
+
+PHƯƠNG PHÁP THỰC HIỆN
+
+CÁC HỆ THỐNG TƯƠNG TỰ
+
+Hệ thống  
+
+Website vpphongha.vn là một hệ thống thương mại điện tử chuyên doanh về lĩnh vực văn phòng phẩm và dụng cụ học tập
+
+Giao diện người dùng 
+
+Trang chủ 
+
+Hình 2-1: Giao diện trang chủ
+
+Trang sản phẩm 
+
+Hình 2-2: Giao diện trang sản phẩm
+
+Trang sản phẩm khuyến mãi
+
+Hình 2-3: Giao diện trang sản phẩm khuyến mãi
+
+Trang giỏ hàng
+
+Hình 2-4: Giao diện giỏ hàng
+
+Trang đăng nhập/ đăng ký
+
+Hình 2-5: Giao diện trang đăng nhập
+
+Hình 2-6: Giao diện đăng ký
+
+Các danh mục sản phẩm 
+
+Hình 2-7: Giao diện danh mục sản phẩm
+
+Ưu điểm:
+
+Danh mục sản phẩm đa dạng và phân loại khoa học: Website phân chia sản phẩm rất chi tiết theo thương hiệu (Pentel, Uni, Campus, Deli...) và theo công dụng (Bút máy, Vở học sinh, Đồ dùng văn phòng...) giúp người dùng dễ dàng lọc và tìm kiếm theo đúng nhu cầu.
+
+Tính năng khuyến mãi trực quan: Các sản phẩm được gắn nhãn giảm giá (ví dụ: -31%, -50%) và có thông tin quà tặng đi kèm (như mua 10 tặng 1) ngay trên giao diện danh sách, giúp kích thích hành vi mua hàng.
+
+Giao diện tương tác khách hàng tốt: Tích hợp đầy đủ các kênh hỗ trợ trực tuyến như Hotline, Email, và thông tin chứng nhận bán hàng chính hãng ngay tại trang chủ để tăng độ tin cậy.
+
+Tốc độ tải trang ổn định: Website sử dụng cấu trúc mã nguồn tối ưu giúp việc hiển thị danh sách sản phẩm lớn và các menu đa cấp vẫn giữ được tốc độ phản hồi nhanh.
+
+Nhược điểm 
+
+Giao diện có phần lỗi thời: Phong cách thiết kế còn mang tính chất truyền thống, mật độ thông tin và banner dày đặc dễ gây cảm giác rối mắt cho người dùng mới trên phiên bản máy tính.
+
+Chưa tối ưu hóa hoàn toàn cho thiết bị di động (Mobile Responsive): Một số bảng dữ liệu hoặc danh mục dài vẫn gây khó khăn khi thao tác trên màn hình nhỏ.
+
+Quy trình đặt hàng (Checkout) còn nhiều bước: Việc yêu cầu đăng nhập hoặc điền quá nhiều thông tin thủ công có thể làm tăng tỷ lệ bỏ giỏ hàng.
+
+Thiếu tính năng gợi ý thông minh: Hệ thống chủ yếu dựa vào việc lọc thủ công, chưa có các module "Sản phẩm liên quan" hoặc "Khách hàng thường mua cùng" dựa trên thuật toán để cá nhân hóa trải nghiệm.
+
+Giao diện admin
+
+Hệ thống Haravan là một nền tảng quản trị bán hàng đa kênh phổ biến.
+
+https://dinh-24.myharavan.com/
+
+Trang đăng ký/ đăng nhập
+
+Hình 2-8: Giao diện đăng nhập
+
+Trang admin 
+
+Hình 2-9: Giao diện trang admin
+
+Trang quản lý đơn hàng 
+
+Hình 2-10: Giao diện trang quản lý đơn hàng
+
+Trang quản lý sản phẩm
+
+Hình 2-11: Giao diện trang quản lý sản phẩm
+
+Trang quản lý khách hàng 
+
+Hình 2-12: Giao diện trang quản lý khách hàng
+
+Trang báo cáo
+
+Hình 2-13: Giao diện trang báo cáo
+
+Ưu điểm:
+
+Hệ thống báo cáo trực quan: Dashboard cung cấp các biểu đồ thống kê doanh thu, số lượng đơn hàng và khách hàng theo thời gian thực (startDate/endDate). Điều này giúp Admin nắm bắt nhanh tình hình kinh doanh mà không cần xem từng dòng dữ liệu.
+
+Giao diện quản trị tập trung: Các module quản lý đơn hàng, sản phẩm, khách hàng được bố trí khoa học ở thanh menu bên trái, giúp thao tác chuyển đổi giữa các chức năng cực kỳ nhanh chóng.
+
+Tính năng lọc dữ liệu mạnh mẽ: Cho phép lọc đơn hàng và doanh thu theo khoảng thời gian chính xác, giúp việc đối soát dữ liệu bảng donhang trở nên chuyên nghiệp.
+
+Thiết kế tối giản (Minimalism): Sử dụng các khoảng trắng và màu sắc trung tính, giúp người quản trị tập trung vào các số liệu quan trọng mà không bị rối mắt.
+
+Nhược điểm:
+
+Cấu trúc phức tạp cho người mới: Vì là hệ thống đa năng, có rất nhiều tính năng thừa (như Marketing, Omni-channel) mà một cửa hàng dụng cụ học tập nhỏ có thể không cần đến, gây loãng trải nghiệm người dùng.
+
+Khó tùy chỉnh theo nghiệp vụ riêng: Do là nền tảng đóng (SaaS), người dùng không thể can thiệp vào mã nguồn PHP hay cấu trúc database để thêm các trường dữ liệu đặc thù cho dụng cụ học tập (như thuộc tính loại ngòi bút, độ dày giấy...).
+
+Phụ thuộc vào internet và chi phí: Hệ thống yêu cầu kết nối mạng liên tục và trả phí duy trì, không phù hợp với tiêu chí tự phát triển hệ thống nội bộ tiết kiệm của các đơn vị nhỏ.
+
+ CÔNG NGHỆ SỬ DỤNG 
+
+Ngôn ngữ lập trình và Công nghệ Web
+
+React (React.js): Thư viện JavaScript mã nguồn mở phổ biến được sử dụng để xây dựng giao diện người dùng (User Interface). Với kiến trúc dựa trên các thành phần độc lập (Component-based), React giúp tối ưu hóa hiệu năng hiển thị nhờ cơ chế Virtual DOM, tăng khả năng tái sử dụng mã nguồn và mang lại trải nghiệm mượt mà (Single Page Application - SPA) cho người dùng khi mua sắm.
+
+ASP.NET Core Web API (.NET 8.0): Framework mã nguồn mở, hiệu năng cao của Microsoft được sử dụng làm công nghệ phía máy chủ (Backend) để xây dựng hệ thống RESTful API. Phiên bản .NET 8.0 (Long-Term Support - LTS) giúp xử lý các logic nghiệp vụ bán hàng, quản lý xác thực và cung cấp dữ liệu cho phía React một cách bảo mật, ổn định.
+
+Entity Framework Core (EF Core 8.0): Bộ ánh xạ cơ sở dữ liệu quan hệ đối tượng (ORM) hiện đại dành cho .NET. EF Core được áp dụng theo phương pháp Code-First, cho phép thiết kế hệ thống cơ sở dữ liệu trực tiếp bằng ngôn ngữ C# và tự động đồng bộ cấu trúc bảng thông qua cơ chế Migration.
+
+HTML5, CSS3 & JavaScript (ES6+): Các nền tảng công nghệ cốt lõi tích hợp trực tiếp bên trong các thành phần (Component) của React. HTML5 định hình cấu trúc, CSS3 xây dựng giao diện tương thích đa màn hình (Responsive) và JavaScript xử lý các logic tương tác, truyền nhận dữ liệu bất đồng bộ với Backend.
+
+Hệ quản trị cơ sở dữ liệu
+
+Microsoft SQL Server: Hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) mạnh mẽ, được sử dụng để lưu trữ và quản lý toàn bộ dữ liệu của hệ thống bao gồm thông tin dụng cụ học tập, đơn hàng, khách hàng và tài khoản. Các bảng được thiết kế chuẩn hóa với các ràng buộc khóa chính, khóa ngoại chặt chẽ để đảm bảo tính toàn vẹn dữ liệu.
+
+Cloudinary Cloud Storage: Dịch vụ lưu trữ đám mây chuyên dụng được tích hợp để quản lý toàn bộ tệp tin hình ảnh sản phẩm của website. Hệ thống Backend chỉ lưu trữ các đường dẫn liên kết URL dạng chuỗi (string) vào cơ sở dữ liệu, giúp tối ưu hóa dung lượng lưu trữ của máy chủ ứng dụng và tăng tốc độ tải trang.
+
+Môi trường phát triển và Công cụ hỗ trợ 
+
+Microsoft Visual Studio 2022: Môi trường phát triển tích hợp (IDE) chính được sử dụng để lập trình hệ thống Backend ASP.NET Core, quản lý gói thư viện NuGet, debug mã nguồn C# và kiểm thử API trực quan thông qua giao diện Swagger tích hợp sẵn.
+
+Visual Studio Code (VS Code): Trình soạn thảo mã nguồn nhẹ và linh hoạt, được sử dụng để phát triển dự án Frontend React nhờ vào khả năng hỗ trợ nhiều extension tiện ích và trình quản lý file thông minh.
+
+GitHub: Sử dụng làm hệ thống quản lý phiên bản (Version Control System), giúp lưu trữ mã nguồn, theo dõi các thay đổi và đảm bảo an toàn cho dữ liệu dự án trong suốt quá trình thực hiện.
+
+Figma: Công cụ chính được sử dụng để thiết kế mẫu giao diện (UI/UX Design), giúp mô phỏng luồng hoạt động của các màn hình chức năng trước khi tiến hành lập trình.
+
+PHÂN TÍCH YÊU CẦU 
+
+Các quy trình, nghiệp vụ  
+
+Quy trình Đăng ký và Đăng nhập
+
+Đăng ký: Khách hàng cung cấp các thông tin cơ bản bao gồm Họ tên, Email, Số điện thoại, Địa chỉ và Mật khẩu. Hệ thống kiểm tra tính duy nhất của Email trước khi lưu trữ tài khoản mới vào hệ thống.
+
+Đăng nhập: Người dùng sử dụng Email và Mật khẩu đã đăng ký để truy cập. Hệ thống sẽ xác thực thông tin và khởi tạo phiên làm việc (Session) để duy trì trạng thái đăng nhập.
+
+Hình 2-14: Quy trình đăng nhập và đăng ký
+
+Quy trình Tìm kiếm và Mua hàng
+
+Đây là quy trình chính dành cho khách hàng khi tương tác với website:
+
+Tìm kiếm: Khách hàng có thể tìm kiếm sản phẩm theo tên, loại sản phẩm (bút, vở, máy tính...) hoặc theo thương hiệu (Thiên Long, Deli, Casio...).
+
+Quản lý giỏ hàng: Người dùng thêm các sản phẩm yêu thích vào giỏ hàng. Tại đây, khách hàng có quyền cập nhật số lượng hoặc xóa bỏ những sản phẩm không còn nhu cầu mua.
+
+Đặt hàng: Sau khi kiểm tra giỏ hàng, khách hàng tiến hành xác nhận thông tin giao hàng và đặt hàng. Hệ thống sẽ ghi nhận đơn hàng mới với trạng thái ban đầu là "Đang xử lý".
+
+Hình 2-15: Quy trình Tìm kiếm và Mua hàng
+
+Quy trình Quản lý và Xử lý đơn hàng 
+
+Quy trình này do nhân viên cửa hàng thực hiện để đảm bảo hàng hóa đến tay khách hàng:
+
+Tiếp nhận: Nhân viên kiểm tra danh sách các đơn hàng mới phát sinh trong hệ thống.
+
+Xác nhận và Giao hàng: Sau khi kiểm tra tồn kho vật lý, nhân viên xác nhận đơn hàng và chuyển trạng thái sang "Đang giao".
+
+Hoàn tất: Khi khách hàng đã nhận được hàng, trạng thái đơn hàng sẽ được cập nhật thành "Hoàn tất" để làm cơ sở tính toán doanh thu.
+
+Hình 2-16: Quy trình Quản lý và Xử lý đơn hàng
+
+Quy trình Nhập hàng
+
+Nghiệp vụ dành cho Nhân viên nhằm duy trì lượng hàng tồn kho ổn định:
+
+Khởi tạo: Khi sản phẩm trong kho sắp hết, nhân viên tạo phiếu nhập hàng mới.
+
+Ghi nhận: Nhân viên chọn nhà cung cấp và nhập các thông tin chi tiết như số lượng nhập, đơn giá nhập cho từng loại dụng cụ học tập. Hệ thống sẽ tự động cập nhật lại số lượng tồn kho của sản phẩm sau khi phiếu nhập được lưu.
+
+Hình 2-17: Quy trình Nhập hàng
+
+Quy trình Thống kê và Báo cáo 
+
+Nghiệp vụ dành riêng cho cấp quản trị (Admin) để theo dõi hiệu quả kinh doanh:
+
+Thống kê doanh thu: Hệ thống tự động tổng hợp dữ liệu từ các đơn hàng đã hoàn tất để xuất báo cáo theo ngày, tháng hoặc năm.
+
+Báo cáo sản phẩm: Admin có thể xem danh sách các sản phẩm bán chạy hoặc các sản phẩm tồn kho lâu ngày để đưa ra các chương trình khuyến mãi phù hợp.
+
+Hình 2-18: Quy trình Thống kê và Báo cáo
+
+Sơ đồ chức năng 
+
+Hình 2-19: Sơ đồ chức năng
+
+Sơ đồ Use case tổng quát 
+
+Hình 2-20: Sơ đồ Use case tổng quát
+
+Bảng đặt tả Use case tổng quát
+
+STT
+
+Actor
+
+Tên Use case
+
+Mô tả ngắn gọn
+
+1
+
+Khách hàng
+
+Đăng ký tài khoản
+
+Cho phép khách vãng lai tạo tài khoản mới để trở thành thành viên của hệ thống.
+
+2
+
+Khách hàng
+
+Tìm kiếm & Lọc sản phẩm
+
+Cho phép khách hàng tìm kiếm sản phẩm theo từ khóa và lọc theo loại, thương hiệu, khoảng giá.
+
+3
+
+Khách hàng
+
+Xem sản phẩm
+
+Cho phép khách hàng xem thông tin chi tiết, hình ảnh, giá và đánh giá của sản phẩm.
+
+4
+
+Khách hàng
+
+Quản lý Giỏ hàng
+
+Cho phép khách hàng thêm, sửa số lượng, xóa sản phẩm khỏi giỏ hàng trước khi đặt hàng.
+
+5
+
+Khách hàng
+
+Đặt hàng & Thanh toán
+
+Cho phép khách hàng tạo đơn hàng từ giỏ hàng và thực hiện thanh toán (COD hoặc trực tuyến).
+
+6
+
+Khách hàng
+
+Đánh giá sản phẩm
+
+Cho phép khách hàng đánh giá số sao và nhận xét sản phẩm đã mua sau khi đơn hàng hoàn tất.
+
+7
+
+Khách hàng, Admin, Nhân viên
+
+Đăng nhập / Đăng xuất
+
+Xác thực tài khoản để truy cập hệ thống theo đúng vai trò (Role) và kết thúc phiên làm việc.
+
+8
+
+Admin, Nhân viên
+
+Quản lý Sản phẩm
+
+Cho phép Admin thêm, sửa, xóa và cập nhật thông tin, tồn kho của sản phẩm.Nhân viên chỉ xem thông tin sản phẩm
+
+9
+
+Admin
+
+Quản lý Danh mục
+
+Cho phép Admin thêm, sửa, xóa Loại sản phẩm, Thương hiệu, Nhà cung cấp.
+
+10
+
+Admin
+
+Quản lý Tài khoản & Phân quyền
+
+Cho phép Admin khởi tạo, khóa/mở khóa tài khoản và phân quyền truy cập cho Nhân viên, Khách hàng.
+
+11
+
+Admin
+
+Quản lý Khuyến mãi
+
+Cho phép Admin tạo, chỉnh sửa các chương trình khuyến mãi áp dụng cho sản phẩm.
+
+12
+
+Admin
+
+Xem Thống kê & Doanh thu
+
+Cho phép Admin xem báo cáo doanh thu, sản phẩm bán chạy theo ngày/tháng/năm.
+
+13
+
+Admin, Nhân viên
+
+Quản lý & Duyệt đơn hàng
+
+Cho phép Nhân viên xem, xác nhận và cập nhật trạng thái xử lý các đơn hàng của khách.
+
+14
+
+Admin, Nhân viên
+
+Quản lý Nhập hàng & Kho
+
+Cho phép Nhân viên lập phiếu nhập hàng và cập nhật số lượng tồn kho sản phẩm.
+
+15
+
+Admin, Nhân viên
+
+Xem báo cáo tồn kho
+
+Cho phép Nhân viên xem danh sách sản phẩm tồn kho để đề xuất kế hoạch nhập hàng.
+
+Bảng 2-1: Bảng đặt tả use case tổng quan
+
+THIẾT KẾ 
+
+ MÔ HÌNH DỮ LIỆU 
+
+Mô hình thực thể mối quan hệ
+
+Các thực thể chính: 
+
+TaiKhoan (Tài khoản): Lưu trữ thông tin đăng nhập, mật khẩu và vai trò (phân quyền) của người dùng trong hệ thống.
+
+NhanVien (Nhân viên): Quản lý hồ sơ thông tin cá nhân của nhân viên cửa hàng.
+
+KhachHang (Khách hàng): Lưu trữ hồ sơ thông tin khách hàng và điểm tích lũy thành viên.
+
+HangKhachHang (Hạng khách hàng): Định nghĩa các cấp bậc thành viên (Đồng, Bạc, Vàng, Bạch kim, Kim cương...) cùng phần trăm ưu đãi đi kèm.
+
+SanPham (Sản phẩm): Mặt hàng thương mại được kinh doanh trên hệ thống.
+
+LoaiSP (Loại sản phẩm): Danh mục phân loại các mặt hàng sản phẩm.
+
+ThuongHieu (Thương hiệu): Nhãn hàng, hãng sản xuất của sản phẩm.
+
+NhaCungCap (Nhà cung cấp): Đối tác cung ứng nguồn hàng cho hệ thống.
+
+GioHang (Giỏ hàng): Giỏ hàng tạm thời của từng khách hàng để giữ các món đồ chuẩn bị mua.
+
+DonHang (Đơn hàng): Hóa đơn lưu thông tin giao dịch mua sắm của khách hàng.
+
+PhuongThucThanhToan (Phương thức thanh toán): Các hình thức thanh toán được tích hợp (COD, Chuyển khoản...).
+
+NhapHang (Phiếu nhập hàng): Chứng từ ghi nhận hoạt động nhập thêm hàng hóa vào kho.
+
+KhuyenMai (Khuyến mãi): Chương trình ưu đãi, giảm giá áp dụng theo thời gian.
+
+DanhGia (Đánh giá): Phản hồi, số sao và nội dung bình luận của khách hàng về sản phẩm sau khi mua.
+
+Các mối quan hệ:
+
+Một Tài khoản có thể liên kết với tối đa một Nhân viên hoặc một Khách hàng (Phục vụ chức năng đăng nhập).
+
+Một Khách hàng sở hữu duy nhất một Giỏ hàng tương ứng trên hệ thống.
+
+Một Thương hiệu có nhiều Sản phẩm.
+
+Một Loại sản phẩm chứa nhiều Sản phẩm.
+
+Một Nhà cung cấp có thể cung cấp nhiều Sản phẩm, đồng thời xuất hiện trên nhiều Phiếu nhập hàng.
+
+Một Hạng khách hàng có thể áp dụng cho nhiều Khách hàng.
+
+Một Khách hàng có thể đặt nhiều Đơn hàng và thực hiện nhiều lượt Đánh giá.
+
+Một Nhân viên có thể chịu trách nhiệm lập nhiều Phiếu nhập hàng.
+
+Một Phương thức thanh toán có thể được áp dụng trong nhiều Đơn hàng.
+
+Một Đơn hàng có thể nhận được nhiều lượt Đánh giá đi kèm từ khách hàng.
+
+Một Đơn hàng có nhiều Sản phẩm và một Sản phẩm có thể nằm trong nhiều Đơn hàng (Thông qua bảng trung gian ChiTietDonHang, có lưu trữ thêm số lượng và đơn giá lúc mua).
+
+Một Phiếu nhập hàng có nhiều Sản phẩm và một Sản phẩm có thể được nhập về nhiều lần (Thông qua bảng trung gian ChiTietNhapHang, có lưu trữ số lượng nhập và giá vốn).
+
+Một Giỏ hàng có thể chứa nhiều Sản phẩm và một Sản phẩm có thể nằm trong nhiều Giỏ hàng của nhiều người (Thông qua bảng trung gian ChiTietGioHang).
+
+Một Sản phẩm có thể tham gia nhiều chương trình Khuyến mãi và một đợt Khuyến mãi có thể áp dụng cho nhiều Sản phẩm (Thông qua bảng liên kết sp_km).
+
+Một Tài khoản có thể thích nhiều sản phẩm và một sản phẩm có thể có được nhiều người yếu thích (Thông qua bảng liên kết SanPhamYeuThich) 
+
+Hình 3-1 Sơ đồ ERD tổng quát
+
+Các bảng dữ liệu 
+
+Bảng Khách hàng
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaKH
+
+Int
+
+x
+
+x
+
+x
+
+Mã khách hàng (Tự tăng)
+
+HoTen
+
+Nvarchar (100)
+
+x
+
+Họ tên khách hàng
+
+SDT
+
+Varchar (20)
+
+Số điện thoại
+
+DiaChi
+
+Nvarchar (MAX)
+
+Địa chỉ
+
+MaTK
+
+Int
+
+Mã tài khoản liên kết (FK)
+
+DiemTichLuy
+
+Int
+
+Điểm tích lũy thành viên
+
+MaHang
+
+Int
+
+Mã hạng khách hàng (FK)
+
+Bảng 3-1 Đặc tả khách hàng
+
+Bảng Sản phẩm
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaSP
+
+Int
+
+x
+
+x
+
+x
+
+Mã sản phẩm (Tự tăng)
+
+TenSP
+
+Nvarchar (100)
+
+x
+
+Tên sản phẩm
+
+MoTa
+
+Nvarchar (MAX)
+
+Mô tả chi tiết sản phẩm
+
+Gia
+
+Decimal (18, 0)
+
+Giá bán niêm yết
+
+SoLuongTon
+
+Int
+
+Số lượng còn lại trong kho
+
+HinhAnh
+
+Varchar (255)
+
+Đường dẫn/Tên file ảnh sản phẩm
+
+MaLoai
+
+Int
+
+Mã loại sản phẩm (FK)
+
+MaNCC
+
+Int
+
+Mã nhà cung cấp (FK)
+
+MaTH
+
+Int
+
+Mã thương hiệu (FK)
+
+Bảng 3-2 Đặc tả sản phẩm
+
+Bảng Đơn hàng
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaDH
+
+Int
+
+x
+
+x
+
+x
+
+Mã đơn hàng (Tự tăng)
+
+MaKH
+
+Int
+
+Mã khách hàng đặt hàng (FK)
+
+HoTenNguoiNhan
+
+Nvarchar (100)
+
+Tên người nhận hàng
+
+SDTNguoiNhan
+
+Varchar
+
+(20)
+
+Số điện thoại người nhận
+
+NgayDat
+
+Date
+
+Ngày khách đặt hàng
+
+TrangThai
+
+Nvarchar (50)
+
+Tình trạng: Chờ xử lý, Hoàn thành...
+
+TongTien
+
+Decimal (18, 0)
+
+Tổng giá trị đơn hàng
+
+DiaChiGiaoHang
+
+Nvarchar (MAX)
+
+Địa chỉ giao hàng thực tế
+
+GhiChu
+
+Nvarchar (MAX)
+
+Ghi chú của đơn hàng
+
+MaPTTT
+
+Int
+
+Mã phương thức thanh toán (FK)
+
+TrangThaiThanhToan
+
+Nvarchar (50)
+
+x
+
+Tình trạng thanh toán của đơn hàng
+
+MaGiaoDịchNgoai
+
+Nvarchar (100)
+
+Mã giao dịch từ cổng thanh toán bên ngoài
+
+Bảng 3-3 Đặc tả đơn hàng
+
+Bảng Tài khoản
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaTK
+
+Int
+
+x
+
+x
+
+x
+
+Mã tài khoản (Tự tăng)
+
+TenDangNhap
+
+Varchar (50)
+
+x
+
+x
+
+Tên đăng nhập (Duy nhất)
+
+MatKhau
+
+Varchar (255)
+
+x
+
+Mật khẩu (đã mã hóa)
+
+Email
+
+Varchar (100)
+
+Email
+
+VaiTro
+
+Nvarchar (50)
+
+Quyền hạn: Admin, Nhân viên, Khách...
+
+TrangThai
+
+Bit
+
+x
+
+1: Hoạt động, 0: Khóa
+
+Avatar
+
+Varchar (255)
+
+Đường dẫn ảnh đại diện
+
+ResetToken
+
+Nvarchar (10)
+
+Mã token đặt lại mật khẩu
+
+ResetTokenExpiry
+
+Datetime2(7)
+
+Thời gian hết hạn của mã token
+
+Bảng 3-4 Đặc tả tài khoản
+
+Bảng Chi tiết đơn hàng
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaDH
+
+Int
+
+x
+
+x
+
+Mã đơn hàng (PK, FK)
+
+MaSP
+
+Int
+
+x
+
+x
+
+Mã sản phẩm (PK, FK)
+
+SoLuong
+
+Int
+
+x
+
+Số lượng sản phẩm mua
+
+DonGia
+
+Decimal (18, 0)
+
+x
+
+Đơn giá sản phẩm tại thời điểm mua
+
+Bảng 3-5 Đặc tả chi tiết đơn hàng
+
+Bảng Nhân viên
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaNV
+
+Int
+
+x
+
+x
+
+x
+
+Mã nhân viên (Tự tăng)
+
+MaSoNhanVien
+
+Varchar (20)
+
+x
+
+x
+
+Mã số định danh nhân viên
+
+HoTen
+
+Nvarchar (100)
+
+x
+
+Họ và tên nhân viên
+
+GioiTinh
+
+Nvarchar (10)
+
+Giới tính (Nam/Nữ)
+
+NgaySinh
+
+Date
+
+Ngày tháng năm sinh
+
+SDT
+
+Varchar (20)
+
+Số điện thoại liên lạc
+
+DiaChi
+
+Nvarchar (255)
+
+Địa chỉ cư trú
+
+MaTK
+
+Int 
+
+Mã tài khoản liên kết (FK)
+
+Bảng 3-6 Đặc tả nhân viên
+
+Bảng Nhà cung cấp
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaNCC
+
+Int
+
+x
+
+x
+
+x
+
+Mã nhà cung cấp (Tự tăng)
+
+TenNCC
+
+Nvarchar (100)
+
+x
+
+Tên đầy đủ của nhà cung cấp
+
+DiaChi
+
+Nvarchar (MAX)
+
+Địa chỉ trụ sở
+
+SDT
+
+Varchar (20)
+
+Số điện thoại giao dịch
+
+Email
+
+Varchar (100)
+
+Email liên hệ
+
+Bảng 3-7 Đặc tả nhà cung cấp
+
+Bảng Nhập hàng
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaNH
+
+Int
+
+x
+
+x
+
+x
+
+Mã đơn nhập hàng (Tự tăng)
+
+MaNV
+
+Int
+
+Mã nhân viên thực hiện nhập (FK)
+
+MaNCC
+
+Int
+
+Mã nhà cung cấp (FK)
+
+NgayNhap
+
+Date
+
+Ngày thực hiện nhập hàng
+
+TongTien
+
+Decimal (18, 0)
+
+Tổng giá trị hóa đơn nhập
+
+TrangThai
+
+Nvarchar (50)
+
+x
+
+Trạng thái phiếu nhập (Chờ xác nhận, Hoàn thành)
+
+Bảng 3-8 Đặc tả nhập hàng
+
+Bảng Thương hiệu
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaTH
+
+Int
+
+x
+
+x
+
+x
+
+Mã thương hiệu (Tự tăng)
+
+TenTH
+
+Nvarchar (100)
+
+x
+
+Tên thương hiệu (Thiên Long, Deli...)
+
+QuocGia
+
+Nvarchar (100)
+
+Quốc gia xuất xứ
+
+MoTa
+
+Nvarchar (MAX)
+
+Thông tin thêm về thương hiệu
+
+Bảng 3-9 Đặc tả thương hiệu
+
+Bảng Đánh giá
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaDG
+
+Int
+
+x
+
+x
+
+x
+
+Mã đánh giá (Tự tăng)
+
+MaKH
+
+Int
+
+Mã khách hàng đánh giá (FK)
+
+MaSP
+
+Int
+
+Mã sản phẩm được đánh giá (FK)
+
+MaDH
+
+Int 
+
+x
+
+Mã đơn hàng liên quan (FK)
+
+SoSao
+
+Int
+
+Số sao xếp hạng (1-5)
+
+NoiDung
+
+Nvarchar (MAX)
+
+Nội dung nhận xét chi tiết
+
+NgayDG
+
+Date
+
+Ngày thực hiện đánh giá
+
+Bảng 3-10 Đặc tả đánh giá
+
+Bảng Khuyến mãi
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaKM
+
+Int
+
+x
+
+x
+
+x
+
+Mã khuyến mãi (Tự tăng)
+
+TenKM
+
+Nvarchar (100)
+
+Tên chương trình khuyến mãi
+
+NgayBatDau
+
+Date
+
+Ngày bắt đầu
+
+NgayKetThuc
+
+Date
+
+Ngày kết thúc
+
+PhanTramGiam
+
+Int
+
+Phần trăm giảm
+
+DieuKienApDung
+
+Nvarchar (MAX)
+
+Điều kiện áp dụng
+
+Bảng 3-11 Đặc tả khuyến mãi 
+
+Bảng Loại sản phẩm
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaLoai
+
+Int
+
+x
+
+x
+
+x
+
+Mã loại sản phẩm (Tự tăng)
+
+TenLoai
+
+Nvarchar (100)
+
+x
+
+Tên loại sản phẩm
+
+MoTa
+
+Nvarchar (MAX)
+
+Mô tả chi tiết về loại sản phẩm
+
+Bảng 3-12 Đặc tả loại sản phẩm
+
+Bảng Giỏ hàng
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaGH
+
+Int
+
+x
+
+x
+
+x
+
+Mã giỏ hàng (Tự tăng)
+
+MaKH
+
+Int
+
+Mã khách hàng sở hữu giỏ hàng (FK)
+
+NgayCapNhat
+
+Date
+
+Ngày cập nhật giỏ hàng gần nhất
+
+TongTien
+
+Decimal (18, 0)
+
+x
+
+Tổng giá trị dự kiến trong giỏ
+
+CartToken
+
+Varchar (100)
+
+Token định danh giỏ hàng cho khách chưa đăng nhập
+
+Bảng 3-13 Đặc tả giỏ hàng
+
+Bảng Chi tiết giỏ hàng
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaGH
+
+Int 
+
+x
+
+x
+
+Mã giỏ hàng (PK, FK)
+
+MaSP
+
+Int 
+
+x
+
+x
+
+Mã sản phẩm (PK, FK)
+
+SoLuong
+
+Int 
+
+Số lượng sản phẩm chọn mua
+
+DonGia
+
+Decimal (18, 0)
+
+Đơn giá sản phẩm tại lúc thêm vào giỏ
+
+Bảng 3-14 Đặc tả chi tiêt giỏ hàng
+
+Bảng Chi tiết nhập hàng
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaNH
+
+Int 
+
+x
+
+x
+
+Mã đơn nhập hàng (PK, FK)
+
+MaSP
+
+Int 
+
+x
+
+x
+
+Mã sản phẩm (PK, FK)
+
+SoLuong
+
+Int 
+
+Số lượng thực tế nhập kho
+
+DonGia
+
+Decimal (18, 0)
+
+Giá nhập từ nhà cung cấp
+
+Bảng 3-15 Đặc tả chi tiết nhập hàng
+
+Bảng Sản phẩm - Khuyến mãi
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaSP
+
+Int 
+
+x
+
+x
+
+Mã sản phẩm áp dụng KM (PK, FK)
+
+MaKM
+
+Int 
+
+x
+
+x
+
+Mã chương trình khuyến mãi (PK, FK)
+
+Bảng 3-16 Đặc tả sản phẩm - khuyến mãi
+
+Bảng Hạng khách hàng
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaHang
+
+Int
+
+x
+
+x
+
+x
+
+Mã hạng khách hàng 
+
+TenHang
+
+Nvarchar (50)
+
+x
+
+Tên hạng (Ví dụ: Đồng, Bạc, Vàng, Bạch kim, Kim cương)
+
+DiemToiThieu
+
+Int
+
+x
+
+Số điểm tối thiểu để đạt được hạng này
+
+PhanTramUuDai
+
+Int 
+
+x
+
+Phần trăm giảm giá hoặc ưu đãi đặc quyền của hạng (%)
+
+Bảng 3-17 Đặt tả hạng khách hàng
+
+Bảng Phương thức thanh toán
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaPTTT
+
+Int
+
+x
+
+x
+
+x
+
+Mã phương thức thanh toán
+
+TenPhuongThuc
+
+Nvarchar (100)
+
+x
+
+Tên phương thức thanh toán
+
+MaCode
+
+Varchar (50)
+
+Mã code định danh hệ thống (Ví dụ: COD, BANK, VNPAY, MOMO)
+
+HinhAnh
+
+Varchar (255)
+
+Đường dẫn lưu ảnh/icon của phương thức thanh toán
+
+GhiChu
+
+Nvarchar (MAX)
+
+Thông tin hướng dẫn thanh toán hoặc ghi chú thêm
+
+TrangThai
+
+bit
+
+x
+
+Trạng thái hoạt động (1: Kích hoạt, 0: Khóa/Ẩn)
+
+Bảng 3-18: Đặc tả phương thức thanh toán
+
+Bảng Sản phẩm yêu thích
+
+Thuộc tính
+
+Kiểu
+
+K
+
+U
+
+M
+
+Diễn giải
+
+MaTK
+
+Int
+
+x
+
+x
+
+Mã tài khoản
+
+MaSP
+
+Int 
+
+x
+
+x
+
+Mã sản phẩm
+
+NgayThem
+
+datetime2(7)
+
+x
+
+Ngày và giờ khách hàng bấm thích sản phẩm
+
+Bảng 3-19: Đặc tả sản phẩm yêu thích 
+
+MÔ HÌNH XỬ LÝ 
+
+Use case chi tiết
+
+Sơ đồ Use Case chi tiết: Đăng nhập
+
+Hình 3-2: Sơ đồ Use Case chi tiết Đăng nhập
+
+Bảng Đặc tả Use case chi tiết Đăng nhập
+
+Thành phần
+
+Nội dung mô tả
+
+Tên Use case
+
+Đăng nhập hệ thống
+
+Actor
+
+Khách hàng, Nhân viên, Admin (Người dùng nói chung)
+
+Mục tiêu
+
+Cho phép người dùng xác thực thông tin tài khoản cá nhân thông qua chuỗi Email và Mật khẩu, hệ thống kiểm tra phân quyền để cấp quyền truy cập các phân hệ chức năng tương ứng. 
+
+Điều kiện tiên quyết
+
+Người dùng đã có tài khoản hợp lệ được lưu trong bảng dữ liệu TaiKhoan
+
+Luồng sự kiện chính
+
+1. Người dùng truy cập vào giao diện Đăng nhập của hệ thống.2. Người dùng nhập thông tin bao gồm: Email (hoặc Tên đăng nhập) và Mật khẩu, sau đó nhấn nút "Đăng nhập".3. Hệ thống tiếp nhận yêu cầu và tiến hành Xác thực thông tin tài khoản (Tìm kiếm tài khoản theo Email và thực hiện băm mật khẩu người dùng vừa nhập để đối chiếu với mật khẩu đã mã hóa trong CSDL).4. Hệ thống tiếp tục Kiểm tra trạng thái tài khoản để đảm bảo tài khoản vẫn đang ở trạng thái Hoạt động (không bị khóa).5. Sau khi xác thực hợp lệ tất cả thông tin, hệ thống Khởi tạo phiên làm việc & Cấp chuỗi bảo mật JWT (JSON Web Token) chứa thông tin định danh và vai trò (Role) của người dùng.6. Hệ thống chuyển hướng người dùng đến giao diện tương ứng với phân quyền (Trang chủ mua sắm đối với Khách hàng; Trang quản trị Dashboard đối với Admin/Nhân viên).
+
+Ngoại lệ
+
+- Ngoại lệ 1 (Sai thông tin): Tại bước 3, nếu hệ thống không tìm thấy Email hoặc mật khẩu đối chiếu không khớp, hệ thống kích hoạt luồng Hiển thị thông báo sai tài khoản / mật khẩu. Quá trình đăng nhập bị hủy bỏ, yêu cầu người dùng nhập lại.- Ngoại lệ 2 (Tài khoản vô hiệu hóa): Tại bước 4, nếu thuộc tính trạng thái của tài khoản là Khóa (False), hệ thống kích hoạt luồng Hiển thị thông báo tài khoản đã bị tạm khóa. Hệ thống từ chối truy cập và yêu cầu người dùng liên hệ quản trị viên.
+
+Kết quả đầu ra
+
+- Thành công: Chuỗi JWT được tạo ra và trả về phía Client (lưu vào LocalStorage/Cookie). Người dùng có quyền truy cập vào các API/chức năng được bảo mật theo đúng Vai trò (Role) của mình.- Thất bại: Hệ thống giữ nguyên trạng thái khách vãng lai, không cấp Token và hiển thị thông báo lỗi tương ứng.
+
+Bảng 3-20: Bảng Đặc tả Use case chi tiết Đăng nhập
+
+Sơ đồ Use Case chi tiết: Đặt hàng và Thanh toán online
+
+Hình 3-3: Sơ đồ Use Case chi tiết: Đặt hàng và Thanh toán online
+
+Bảng Đặc tả Use case chi tiết Đặt hàng và Thanh toán online
+
+Thành phần
+
+Nội dung mô tả
+
+Tên Use case
+
+Đặt hàng và Thanh toán
+
+Actor
+
+Khách hàng (Tác nhân chính - Primary Actor)Cổng thanh toán VNPay/MoMo (Tác nhân phụ - Secondary Actor)
+
+Mục tiêu
+
+Cho phép khách hàng hoàn tất việc mua hàng bằng cách cung cấp địa chỉ nhận hàng, lựa chọn hình thức thanh toán và lưu trữ đơn hàng thành công vào hệ thống.
+
+Điều kiện tiên quyết
+
+Khách hàng đã có ít nhất một sản phẩm hợp lệ trong Giỏ hàng và đang ở giao diện Thanh toán.
+
+Luồng sự kiện chính
+
+1. Khách hàng nhấn nút tiến hành Xác nhận Đặt hàng từ trang giỏ hàng.2. Hệ thống bắt buộc khách hàng thực hiện Nhập thông tin Giao hàng (bao gồm Họ tên, Số điện thoại, Địa chỉ nhận hàng).3. Sau khi điền địa chỉ, hệ thống tiếp tục bắt buộc khách hàng Chọn phương thức Thanh toán.Tùy thuộc vào lựa chọn của khách hàng, luồng sự kiện rẽ nhánh:- Nhánh 1: Khách hàng chọn phương thức COD (Tiền mặt)4a. Hệ thống kích hoạt nhánh COD (Tiền mặt). Hệ thống lưu hóa đơn vào CSDL và tự động thực hiện Cập nhật trạng thái Đơn hàng (ví dụ: Trạng thái thanh toán = "Chưa thanh toán", Trạng thái đơn = "Chờ xác nhận").- Nhánh 2: Khách hàng chọn Thanh toán Online4b. Hệ thống kích hoạt nhánh Thanh toán Online.5b. Hệ thống đóng gói dữ liệu đơn hàng và chuyển hướng người dùng sang hệ thống của Cổng thanh toán (VNPay/MoMo).6b. Cổng thanh toán xử lý trừ tiền và trả kết quả giao dịch về lại cho Website.7b. Dựa vào mã kết quả từ Cổng thanh toán, hệ thống thực hiện Cập nhật trạng thái Đơn hàng (thành "Đã thanh toán").8. (Kết thúc nhánh) Hệ thống hiển thị màn hình thông báo Đặt hàng thành công cho Khách hàng.
+
+Ngoại lệ
+
+- Thanh toán Online thất bại / Hủy giao dịch: Tại bước 6b, nếu Khách hàng chủ động bấm hủy thanh toán trên trang VNPay/MoMo, Cổng thanh toán sẽ trả về mã lỗi. Tại bước 7b, hệ thống cập nhật trạng thái đơn hàng thành "Thanh toán thất bại" hoặc "Đã hủy".
+
+Kết quả đầu ra
+
+- Thành công: Một Đơn hàng mới được tạo trong Cơ sở dữ liệu với đầy đủ thông tin giao hàng. Giỏ hàng của khách hàng được làm trống. Trạng thái thanh toán phản ánh đúng phương thức đã chọn (Chưa thanh toán hoặc Đã thanh toán).- Thất bại: Khách hàng vẫn ở lại trang thanh toán hoặc trang lỗi, giỏ hàng được giữ nguyên để khách hàng có thể thao tác lại.
+
+Bảng 3-21: Bảng Đặc tả Use case chi tiết Đặt hàng và Thanh toán online
+
+Sơ đồ Use Case chi tiết: Tìm kiếm & Lọc sản phẩm
+
+Hình 3-4: Sơ đồ Use Case chi tiết: Tìm kiếm & Lọc sản phẩm
+
+Bảng Đặc tả Use case chi tiết Tìm kiếm & Lọc sản phẩm
+
+Thành phần
+
+Nội dung mô tả
+
+Tên Use case
+
+Tìm kiếm và Lọc sản phẩm
+
+Actor
+
+Khách hàng
+
+Mục tiêu
+
+Cho phép người dùng tra cứu nhanh chóng danh mục dụng cụ học tập thông qua từ khóa tự do hoặc hệ thống bộ lọc chuyên sâu.
+
+Điều kiện tiên quyết
+
+Hệ thống hoạt động bình thường và người dùng đang truy cập trang sản phẩm.
+
+Luồng sự kiện chính
+
+1. Hệ thống hiển thị danh sách sản phẩm mặc định.2. Người dùng thực hiện thao tác Tra cứu thông qua một hoặc kết hợp nhiều tiêu chí:- Tìm kiếm từ khóa: Nhập tên SP, Loại SP, hoặc Tên thương hiệu.- Lọc Danh mục: Nhấp chọn phân loại (Ví dụ: Balo, Bút viết).- Lọc Thương hiệu: Nhấp chọn nhãn hàng.3. Hệ thống tiếp nhận các tham số tìm kiếm/lọc.4. Hệ thống truy vấn CSDL, loại bỏ các sản phẩm không thỏa mãn điều kiện hợp lệ.5. Hệ thống trả về danh sách kết quả trực quan cho người dùng.
+
+Ngoại lệ
+
+Nếu không có sản phẩm nào trong CSDL khớp với bộ lọc, hệ thống trả về danh sách rỗng và hiển thị thông báo: "Không tìm thấy sản phẩm nào phù hợp" kèm gợi ý xóa bộ lọc.
+
+Kết quả đầu ra
+
+Hệ thống hiển thị danh sách sản phẩm phù hợp với các tiêu chí tìm kiếm hoặc lọc do người dùng lựa chọn.
+
+Bảng 3-22: Bảng Đặc tả Use case chi tiết Tìm kiếm & Lọc sản phẩm
+
+Sơ đồ Use Case chi tiết: Quản lý sản phẩm
+
+Hình 3-5: Sơ đồ Use Case chi tiết: Quản lý sản phẩm
+
+Bảng Đặc tả Use case chi tiết Quản lý sản phẩm
+
+Thành phần
+
+Nội dung mô tả
+
+Tên Use case
+
+Quản lý sản phẩm
+
+Actor
+
+Admin, Nhân viên
+
+Mục tiêu
+
+Cho phép Admin quản lý thông tin sản phẩm trên hệ thống thông qua các chức năng Thêm, Sửa, Xóa. Đồng thời cho phép Admin và Nhân viên xem danh sách sản phẩm để phục vụ công tác quản lý và tra cứu.
+
+Điều kiện tiên quyết
+
+Người dùng đã đăng nhập. Để thực hiện các thao tác Thêm, Sửa, Xóa, tài khoản đăng nhập bắt buộc phải có vai trò (Role) là Admin.
+
+Luồng sự kiện chính
+
+1. Người dùng đăng nhập vào hệ thống.2. Người dùng chọn chức năng Quản lý sản phẩm.3. Hệ thống hiển thị danh sách sản phẩm hiện có.4. Nếu người dùng là Admin, hệ thống cho phép thực hiện các chức năng Thêm, Sửa, Xóa sản phẩm.5. Khi thêm hoặc sửa, Admin nhập các thông tin sản phẩm (Tên sản phẩm, Loại sản phẩm, Thương hiệu, Giá bán, Số lượng tồn, Mô tả, Hình ảnh...).6. Nếu có hình ảnh, Admin thực hiện tải lên hình ảnh sản phẩm.7. Hệ thống kiểm tra tính hợp lệ của dữ liệu.8. Hệ thống lưu thông tin vào cơ sở dữ liệu và cập nhật danh sách sản phẩm.9. Hệ thống thông báo thao tác thành công.
+
+Ngoại lệ
+
+1. Người dùng chưa đăng nhập hệ thống yêu cầu đăng nhập.2. Người dùng không có quyền Thêm/Sửa/Xóa hệ thống từ chối truy cập và thông báo không đủ quyền.3. Thiếu hoặc sai thông tin bắt buộc (Tên sản phẩm, Giá, Loại sản phẩm...) hệ thống yêu cầu nhập lại.4. Hình ảnh tải lên không đúng định dạng hoặc tải lên thất bại hệ thống thông báo lỗi và yêu cầu chọn lại ảnh.5. Xóa sản phẩm không thành công do sản phẩm đang được sử dụng trong đơn hàng hoặc dữ liệu liên quan hệ thống thông báo không thể xóa.
+
+Kết quả đầu ra
+
+Thông tin sản phẩm được cập nhật thành công trong cơ sở dữ liệu; danh sách sản phẩm được hiển thị theo dữ liệu mới nhất và hệ thống thông báo kết quả thao tác.
+
+Bảng 3-23: Bảng Đặc tả Use case chi tiết Quản lý sản phẩm
+
+Sơ đồ Use Case chi tiết: Xem Thống kê & Doanh thu
+
+Hình 3-6:Sơ đồ Use Case chi tiết: Xem Thống kê & Doanh thu
+
+Bảng Đặc tả Use case chi tiết Xem Thống kê & Doanh thu
+
+Thành phần
+
+Nội dung mô tả
+
+Tên Use case
+
+Xem Thống kê & Doanh thu
+
+Actor
+
+Admin
+
+Mục tiêu
+
+Cho phép Quản trị viên theo dõi tình hình hoạt động kinh doanh thông qua Dashboard tổng quan, bao gồm thống kê doanh thu, số lượng đơn hàng, sản phẩm bán chạy, cảnh báo tồn kho và xuất báo cáo phục vụ công tác quản lý.
+
+Điều kiện tiên quyết
+
+Quản trị viên đã đăng nhập thành công vào hệ thống và có quyền truy cập chức năng Thống kê & Doanh thu. Dữ liệu bán hàng và sản phẩm đã được lưu trong cơ sở dữ liệu.
+
+Luồng sự kiện chính
+
+1. Quản trị viên chọn chức năng Thống kê & Doanh thu.2. Hệ thống hiển thị Dashboard tổng quan với các chỉ số thống kê.3. Quản trị viên có thể lựa chọn khoảng thời gian thống kê (Hôm nay, 7 ngày gần nhất, Tháng này hoặc khoảng thời gian tùy chọn).4. Hệ thống cập nhật và hiển thị doanh thu, số lượng đơn hàng, số lượng sản phẩm đã bán theo khoảng thời gian được chọn.5. Hệ thống hiển thị danh sách các sản phẩm bán chạy và các sản phẩm có số lượng tồn kho thấp (nếu có).6. Quản trị viên có thể chọn chức năng Xuất báo cáo dưới định dạng Excel hoặc PDF.7. Hệ thống tạo báo cáo và cho phép tải xuống.
+
+Ngoại lệ
+
+1. Không có dữ liệu trong khoảng thời gian được chọn hệ thống hiển thị thông báo "Không có dữ liệu thống kê."2. Khoảng thời gian không hợp lệ (Ngày bắt đầu lớn hơn Ngày kết thúc) hệ thống yêu cầu chọn lại khoảng thời gian.3. Quản trị viên không có quyền truy cập chức năng hệ thống từ chối truy cập và hiển thị thông báo lỗi.4. Xuất báo cáo không thành công do lỗi hệ thống hệ thống thông báo lỗi và cho phép thực hiện lại thao tác.
+
+Kết quả đầu ra
+
+Hệ thống hiển thị Dashboard với các thông tin thống kê theo khoảng thời gian được chọn, bao gồm doanh thu, số lượng đơn hàng, sản phẩm bán chạy, cảnh báo tồn kho và hỗ trợ xuất báo cáo dưới định dạng Excel.
+
+Bảng 3-24: Bảng Đặc tả Use case chi tiết Xem Thống kê & Doanh thu
+
+Sơ đồ tuần tự 
+
+Sơ đồ tuần tự Đăng nhập: mô tả luồng xử lý xác thực người dùng. Người dùng nhập Tên đăng nhập và Mật khẩu, hệ thống truy vấn bảng TaiKhoan trong CSDL để kiểm tra sự tồn tại của tài khoản, đối chiếu mật khẩu thông qua thư viện BCrypt và xác nhận trạng thái hoạt động. Nếu tất cả hợp lệ, hệ thống tạo và trả về chuỗi bảo mật JWT giúp Client xác thực các yêu cầu tiếp theo.
+
+Hình 3-7: Sơ đồ tuần tự đăng nhập
+
+Sơ đồ tuần tự Đặt hàng và Thanh toán online: mô tả luồng xử lý từ khi khách hàng xác nhận đặt hàng, hệ thống kiểm tra giỏ hàng và tồn kho, tạo Đơn hàng trong một Database Transaction, sau đó tạo URL thanh toán và chuyển hướng sang Cổng thanh toán (VNPay/MoMo). Sau khi giao dịch hoàn tất, cổng thanh toán trả kết quả về hệ thống (Return URL), hệ thống xác minh chữ ký bảo mật và tự động cập nhật trạng thái đơn hàng thành "Đã thanh toán".
+
+Hình 3-8: Sơ đồ tuần tự Đặt hàng và Thanh toán online
+
+Sơ đồ tuần tự Tìm kiếm & Lọc sản phẩm: mô tả quá trình Khách hàng gửi yêu cầu tra cứu (kèm từ khóa, bộ lọc) lên hệ thống. Hệ thống sẽ truy vấn CSDL để đếm tổng số kết quả, trích xuất danh sách sản phẩm. Cuối cùng hiển thị danh sách lên giao diện hoặc thông báo không tìm thấy kết quả.
+
+Hình 3-9: Sơ đồ tuần tự Tìm kiếm & Lọc sản phẩm
+
+Sơ đồ tuần tự Quản lý thông tin sản phẩm: mô tả luồng xử lý các thao tác Thêm, Sửa và Xóa của Quản trị viên(Admin). Khi Admin thao tác Thêm/Sửa, hệ thống kiểm tra khóa ngoại, tải hình ảnh lên Cloudinary và lưu URL vào CSDL. Khi thao tác Xóa, hệ thống kiểm tra ràng buộc dữ liệu lịch sử (đơn hàng, giỏ hàng) trước khi xóa. Kết quả thao tác được API trả về để giao diện hiển thị thông báo.
+
+Hình 3-10: Sơ đồ tuần tự Quản lý thông tin sản phẩm
+
+Sơ đồ tuần tự Xem Thống kê & Doanh thu: Khi người dùng truy cập trang Dashboard, Giao diện sẽ gọi song song 3 luồng API lên Server. Hệ thống tiến hành truy vấn CSDL để: (1) Tính tổng KPI (chỉ tính doanh thu các đơn đã giao thành công); (2) Nhóm doanh thu theo từng ngày để vẽ biểu đồ; (3) Tính tỷ lệ phần trăm sản phẩm để vẽ biểu đồ tròn. Kết quả được Server trả về đồng loạt để Giao diện hiển thị trực quan.
+
+Hình 3-11: Sơ đồ tuần tự Xem Thống kê & Doanh thu
+
+Sơ đồ hoạt động (activity)
+
+Hình 3-12: Sơ đồ hoạt động đặt hàng và thanh toán
+
+HỆ THỐNG MÀN HÌNH
+
+Giao diện dành cho Khách hàng
+
+Trang chủ
+
+Hình 3-13: Giao diện Trang chủ
+
+Trang Danh sách Sản phẩm
+
+Hình 3-14: Giao diện Trang sản phẩm 
+
+Trang Chi tiết Sản phẩm
+
+Hình 3-15: Giao diện Trang chi tiết sản phẩm
+
+Trang Giỏ hàng 
+
+Hình 3-16: Giao diện Giỏ hàng
+
+Trang Thanh toán
+
+Hình 3-17: Giao diện Thanh toán
+
+Trang Hồ sơ cá nhân
+
+Hình 3-18: Giao diện Trang Hồ sơ cá nhân 
+
+Trang Lịch sử đơn hàng
+
+Hình 3-19: Giao diện Trang Lịch sử đơn hàng  
+
+Giao diện dành cho Quản trị (Admin/Nhân viên) 
+
+Trang Dashboard (Tổng quan) 
+
+Hình 3-20: Giao diện Trang Dashboard 
+
+Trang Quản lý Sản phẩm
+
+Hình 3-21: Giao diện Trang Quản lý Sản Phẩm
+
+Trang Quản lý Đơn hàng
+
+Hình 3-22: Giao diện Trang Quản lý Đơn hàng
+
+Trang Quản lý Nhập hàng
+
+Hình 3-23: Giao diện Quản lý Nhập hàng
+
+Trang Quản lý Khách hàng
+
+Hình 3-24: Giao diện trang Quản lý Khách hàng
+
+Trang Quản lý Nhân viên
+
+Hình 3-25: Giao diện trang Quản lý Nhân viên
+
+Các màn hình chức năng khác
+
+Đăng Nhập
+
+Hình 3-26: Giao diện Đăng nhập
+
+Đăng Ký
+
+Hình 3-27: Giao diện Đăng ký
+
+Trang Quên mật khẩu
+
+Hình 3-28: Giao diện quên mật khẩu
+
+HỆ THỐNG BÁO BIỂU
+
+Hình 3-29: Giao diện hệ thống báo biểu 
+
+Báo cáo Doanh thu
+
+Mục đích: Giúp Admin theo dõi tình hình kinh doanh theo thời gian thực để đưa ra quyết định vận hành.
+
+Nguồn dữ liệu: Tổng hợp từ bảng DonHang, chỉ tính các đơn có trạng thái "Thành công" / "Hoàn thành" / "Đã giao".
+
+Tiêu chí hiển thị: Biểu đồ cột thể hiện doanh thu theo 7 ngày gần nhất hoặc theo từng ngày trong tháng hiện tại; cho phép Admin chuyển đổi khoảng thời gian xem.
+
+Quy tắc nghiệp vụ: Doanh thu không tính đơn đang chờ xử lý, đang giao, hoặc đã hủy — chỉ ghi nhận khi giao dịch thực sự hoàn tất.
+
+Báo cáo Sản phẩm bán chạy
+
+Mục đích: Giúp Admin nhận diện các mặt hàng có nhu cầu cao để lên kế hoạch nhập hàng và đẩy mạnh marketing.
+
+Nguồn dữ liệu: Tổng hợp số lượng bán ra từ ChiTietDonHang, kết hợp DonHang (chỉ các đơn hoàn tất), gom nhóm theo mã sản phẩm.
+
+Tiêu chí hiển thị: Danh sách Top N sản phẩm (mặc định Top 5), sắp xếp giảm dần theo số lượng bán; mỗi dòng hiển thị hình ảnh, tên sản phẩm, số lượng đã bán và doanh thu mang lại.
+
+Quy tắc nghiệp vụ: Chỉ tính số lượng từ đơn hàng đã hoàn tất; loại trừ các đơn bị hủy hoặc hoàn trả để tránh sai lệch số liệu.
+
+Báo cáo Nhập hàng và Tồn kho 
+
+Mục đích: Cảnh báo sớm cho Admin/Nhân viên khi sản phẩm sắp hết hàng nhằm tránh gián đoạn bán hàng, đồng thời cho biết tổng quan tình hình nhập hàng.
+
+Nguồn dữ liệu: Cột SoLuongTon trong bảng SanPham; lịch sử nhập hàng từ NhapHang / ChiTietNhapHang.
+
+Tiêu chí hiển thị: Danh sách các sản phẩm có tồn kho chạm ngưỡng cảnh báo (mặc định ≤ 10), phân loại 2 mức: "Hết hàng" (= 0) và "Sắp hết" (1–10).
+
+Quy tắc nghiệp vụ: Ngưỡng cảnh báo có thể cấu hình được, mặc định là 10 sản phẩm; danh sách được sắp xếp theo số lượng tồn tăng dần để ưu tiên hiển thị các mặt hàng cấp bách nhất trước.
+
+Hình thức hiển thị báo cáo
+
+Trên màn hình: Biểu đồ trực quan (dạng cột cho doanh thu, dạng danh sách/bảng cho Top sản phẩm và Cảnh báo tồn kho), cập nhật theo thời gian thực mỗi khi truy cập trang.
+
+Xuất file: Admin có thể xuất báo cáo doanh thu theo khoảng thời gian đã chọn ra file định dạng CSV (mở được trực tiếp bằng Excel) để lưu trữ hoặc gửi báo cáo offline.
+
+Phân quyền: Chỉ tài khoản Admin mới có thể truy cập các báo cáo này.
+
+THỬ NGHIỆM 
+
+CÁC KỊCH BẢN THỬ NGHIỆM 
+
+Bảng Kịch bản kiểm thử chức năng Đăng ký & Đăng nhập
+
+STT
+
+Tên kịch bản
+
+Các bước thực hiện
+
+Kết quả mong đợi
+
+1
+
+Đăng ký tài khoản mới
+
+Truy cập trang Đăng ký. 
+
+Nhập Họ tên, Tên đăng. nhập, Email, Số điện thoại, Địa chỉ, Mật khẩu.
+
+Nhấn nút "Đăng ký".
+
+Hệ thống kiểm tra Tên đăng nhập và Email chưa trùng, mã hóa mật khẩu bằng BCrypt trước khi lưu, tạo tài khoản mới đồng thời tạo hồ sơ Khách hàng liên kết, hiển thị thông báo thành công và chuyển hướng sang trang Đăng nhập
+
+2
+
+Đăng ký với Tên đăng nhập hoặc Email đã tồn tại
+
+Truy cập trang Đăng ký.
+
+Nhập Tên đăng nhập/Email trùng với tài khoản đã có.
+
+Nhấn "Đăng ký".
+
+Hệ thống từ chối tạo tài khoản, trả về thông báo "Tên đăng nhập đã tồn tại" hoặc "Email đã tồn tại" tương ứng, không ghi dữ liệu mới vào CSDL
+
+3
+
+Đăng nhập bằng Tên đăng nhập/Mật khẩu
+
+Truy cập trang Đăng nhập.
+
+Nhập đúng Tên đăng nhập và Mật khẩu.
+
+Nhấn "Đăng nhập".
+
+Hệ thống xác thực mật khẩu bằng BCrypt, cấp JWT Token hợp lệ, lưu phiên đăng nhập tại Client, chuyển hướng vào trang chủ (hoặc Dashboard nếu là Admin/Nhân viên)
+
+4
+
+Đăng nhập sai mật khẩu / tài khoản bị khóa
+
+Truy cập trang Đăng nhập.
+
+- Trường hợp a: nhập sai mật khẩu.- Trường hợp b: đăng nhập bằng tài khoản có TrangThai = khóa
+
+Trường hợp a: hệ thống trả về lỗi 401 "Tên đăng nhập hoặc mật khẩu không đúng"Trường hợp b: hệ thống trả về lỗi "Tài khoản hiện đang bị khóa", không cấp Token
+
+5
+
+Đăng nhập bằng Google
+
+Tại trang Đăng nhập, chọn "Đăng nhập với Google".
+
+Xác thực với Google.
+
+Hệ thống nhận Token từ Google.
+
+Nếu Email từ Google chưa tồn tại: hệ thống tự động tạo tài khoản mới (mật khẩu ngẫu nhiên đã mã hóa) và đăng nhập luôn; nếu Email đã tồn tại: đăng nhập vào tài khoản tương ứng; nếu tài khoản bị khóa: từ chối đăng nhập
+
+Bảng 4-1: Bảng Kịch bản kiểm thử chức năng Đăng ký & Đăng nhập
+
+Bảng Kịch bản kiểm thử chức năng Tìm kiếm, Thêm vào giỏ hàng  
+
+STT
+
+Tên kịch bản
+
+Các bước thực hiện
+
+Kết quả mong đợi
+
+1
+
+Tìm kiếm và lọc sản phẩm
+
+Truy cập trang Sản phẩm.
+
+Nhập từ khóa tìm kiếm theo tên sản phẩm.
+
+Áp dụng bộ lọc theo Loại sản phẩm, Thương hiệu, khoảng Giá.
+
+Danh sách sản phẩm trả về đúng với từ khóa và điều kiện lọc đã chọn; nếu không có kết quả phù hợp thì hiển thị thông báo "Không tìm thấy sản phẩm".
+
+2
+
+Thêm sản phẩm vào Giỏ hàng
+
+Truy cập trang Sản phẩm.
+
+Chọn sản phẩm vào xem chi tiết sản phẩm.
+
+Nhấn "Thêm vào giỏ hàng" với số lượng hợp lệ
+
+Sản phẩm được thêm vào GioHang/ChiTietGioHang (đối với khách chưa đăng nhập dùng CartToken để định danh giỏ hàng tạm), số lượng trong giỏ được cộng dồn nếu sản phẩm đã có sẵn; sản phẩm đồng thời xuất hiện tại trang Sản phẩm yêu thích
+
+3
+
+Thêm số lượng vượt quá tồn kho vào giỏ hàng
+
+Truy cập trang Sản phẩm.
+
+Chọn sản phẩm vào xem chi tiết sản phẩm.
+
+Nhập số lượng lớn hơn số lượng tồn kho hiện có.
+
+Nhấn "Thêm vào giỏ hàng".
+
+Hệ thống từ chối thao tác, trả về thông báo "Sản phẩm chỉ còn {SoLuongTon} món trong kho", không thêm vào giỏ hàng.
+
+Bảng 4-2: Bảng Kịch bản kiểm thử chức năng Tìm kiếm, Thêm vào giỏ hàng.
+
+Bảng Kịch bản kiểm thử chức năng Đặt hàng và Thanh toán
+
+STT
+
+Tên kịch bản
+
+Các bước thực hiện
+
+Kết quả mong đợi
+
+1
+
+Đặt hàng và thanh toán COD
+
+Vào trang Giỏ hàng, chọn sản phẩm cần thanh toán.
+
+Nhấn Thanh toán, nhập/xác nhận thông tin người nhận.
+
+Chọn phương thức thanh toán "Thanh toán khi nhận hàng (COD)".
+
+Nhấn "Đặt hàng".
+
+Hệ thống tạo DonHang mới với TrangThai = "Chờ xử lý", TrangThaiThanhToan = "Chưa thanh toán", trừ tồn kho (SoLuongTon) tương ứng số lượng đã mua, xóa các sản phẩm đã đặt khỏi giỏ hàng, hiển thị trang Đặt hàng thành công
+
+2
+
+Đặt hàng và thanh toán online qua VNPAY
+
+Tại trang Thanh toán, chọn phương thức VNPAY.
+
+Nhấn "Đặt hàng", hệ thống chuyển hướng sang cổng thanh toán tương ứng.
+
+Thực hiện thanh toán thử nghiệm (thành công hoặc hủy giữa chừng)
+
+Trường hợp thanh toán thành công: hệ thống nhận callback, cập nhật TrangThaiThanhToan = "Đã thanh toán" và lưu MaGiaoDichNgoai; trường hợp hủy/thất bại: đơn hàng vẫn được lưu nhưng TrangThaiThanhToan giữ nguyên "Chưa thanh toán" hoặc "Đang xử lý"
+
+3
+
+Hủy đơn hàng
+
+Vào trang Lịch sử đơn hàng.
+
+Chọn đơn hàng đang "Chờ xử lý".
+
+Nhấn "Hủy đơn hàng".
+
+Đơn hàng chuyển TrangThai = "Đã hủy", số lượng tồn kho (SoLuongTon) của các sản phẩm trong đơn được hoàn trả lại; nếu đơn hàng không còn ở trạng thái "Chờ xử lý" thì hệ thống từ chối hủy và báo lỗi "Chỉ có thể hủy đơn hàng ở trạng thái Chờ xử lý"
+
+4
+
+Đánh giá sản phẩm sau khi mua hàng
+
+Vào trang Lịch sử đơn hàng, chọn đơn đã hoàn tất.
+
+Chọn sản phẩm cần đánh giá, nhấn "Đánh giá".
+
+Chọn số sao và nhập nội dung nhận xét, gửi đánh giá.
+
+Hệ thống kiểm tra đơn hàng tồn tại và đã hoàn thành giao nhận, sản phẩm có thật trong đơn đó, khách chưa từng đánh giá sản phẩm này trong đơn hàng đó → lưu đánh giá thành công; nếu vi phạm bất kỳ điều kiện nào ở trên thì từ chối.
+
+Bảng 4-3: Bảng Kịch bản kiểm thử chức năng Đặt hàng và Thanh toán
+
+Bảng Kịch bản kiểm thử chức năng Quản lý danh mục
+
+STT
+
+Tên kịch bản
+
+Các bước thực hiện
+
+Kết quả mong đợi
+
+1
+
+Quản lý Sản phẩm
+
+Vào các trang Quản lý Sản phẩm.
+
+Thực hiện Thêm mới, Chỉnh sửa, Xóa một bản ghi.
+
+Thử thêm/sửa kèm upload hình ảnh.
+
+Dữ liệu được thêm/sửa/xóa thành công và phản ánh ngay trên danh sách; hình ảnh sản phẩm được tải lên Cloudinary và lưu đường dẫn URL vào trường HinhAnh; nếu xóa một danh mục đang được sản phẩm khác tham chiếu thì hệ thống cần cảnh báo hoặc từ chối xóa để đảm bảo toàn vẹn dữ liệu
+
+2
+
+Quản lý Loại sản phẩm/ Thương hiệu/ Nhà cung cấp
+
+Vào các trang Quản lý Loại sản phẩm/Thương hiệu/Nhà cung cấp tương ứng.
+
+Thực hiện Thêm mới, Chỉnh sửa, Xóa một bản ghi.
+
+Dữ liệu được thêm/sửa/xóa thành công và phản ánh ngay trên danh sách;nếu xóa một danh mục đang được sản phẩm khác tham chiếu thì hệ thống cần cảnh báo hoặc từ chối xóa để đảm bảo toàn vẹn dữ liệu
+
+3
+
+Quản lý chương trình khuyến mãi
+
+Vào trang Quản lý khuyến mãi, nhấn "Tạo khuyến mãi".
+
+Nhập Tên khuyến mãi, Ngày bắt đầu/kết thúc, % giảm giá, chọn danh sách sản phẩm áp dụng.
+
+Lưu chương trình khuyến mãi.
+
+Hệ thống lưu KhuyenMai và liên kết N-N với các SanPham đã chọn; sản phẩm được gắn khuyến mãi hiển thị giá đã giảm tại trang Sản phẩm/Trang khuyến mãi phía khách hàng trong đúng khoảng thời gian hiệu lực
+
+Bảng 4-4: Bảng Kịch bản kiểm thử chức năng Quản lý danh mục
+
+Bảng Kịch bản kiểm thử chức năng Xử lý đơn hàng, Nhập hàng 
+
+STT
+
+Tên kịch bản
+
+Các bước thực hiện
+
+Kết quả mong đợi
+
+1
+
+Cập nhật trạng thái đơn hàng theo luồng xử lý bình thường
+
+1. Chọn 1 đơn hàng đang "Chờ xử lý"2. Cập nhật trạng thái lần lượt: "Chờ xử lý" → "Đang giao" → "Thành công"
+
+Mỗi lần cập nhật, TrangThai của đơn hàng được ghi nhận đúng theo giá trị đã chọn.
+
+Trạng thái "Thành công" để kiểm tra hệ thống vẫn cộng điểm tích lũy đúng
+
+2
+
+Lập phiếu nhập hàng mới (trạng thái "Chờ Xác Nhận")
+
+1. Vào trang Quản lý nhập hàng, nhấn "Tạo phiếu nhập"2. Chọn Nhà cung cấp, thêm danh sách sản phẩm kèm Số lượng và Đơn giá nhập3. Nhấn "Lưu phiếu nhập"
+
+Hệ thống tạo bản ghi NhapHang với TrangThai = "Chờ Xác Nhận" và các dòng ChiTietNhapHang tương ứng; tổng tiền phiếu nhập được tính tự động bằng tổng (Số lượng × Đơn giá) của từng dòng; tồn kho (SoLuongTon) của sản phẩm chưa thay đổi ở bước này
+
+3
+
+Lập phiếu nhập với dữ liệu không hợp lệ
+
+1. Trường hợp a: lập phiếu nhập không chọn sản phẩm nào2. Trường hợp b: chọn Nhà cung cấp không tồn tại (đã bị xóa)3. Trường hợp c: chọn sản phẩm không tồn tại trên hệ thống
+
+Trường hợp a: từ chối, báo "Danh sách sản phẩm nhập kho không được để trống"; trường hợp b: từ chối, báo "Nhà cung cấp không tồn tại trên hệ thống"; trường hợp c: từ chối, báo "Sản phẩm mã {MaSP} không tồn tại trên hệ thống"; không tạo phiếu nhập trong cả 3 trường hợp
+
+4
+
+Phân quyền duyệt phiếu nhập
+
+1. Đăng nhập bằng tài khoản Nhân viên, thử duyệt phiếu (chuyển sang "Hoàn thành")2. Đăng nhập lại bằng tài khoản Admin, thực hiện duyệt phiếu tương tự3. Đối chiếu tồn kho sản phẩm trước/sau khi Admin duyệt
+
+Bước 1 (Nhân viên): hệ thống từ chối với lỗi 403 "Chỉ Quản trị viên (Admin) mới có quyền duyệt phiếu và nhập kho!", tồn kho không đổi; 
+
+Bước 2 (Admin): phiếu chuyển TrangThai = "Hoàn thành" thành công, tồn kho từng sản phẩm được cộng dồn đúng bằng số lượng đã nhập (SoLuongTon += SoLuong); sau khi hoàn thành, phiếu không thể sửa/xóa/duyệt lại được nữa
+
+Bảng 4-5: Bảng Kịch bản kiểm thử chức năng Xử lý đơn hàng, Nhập hàng 
+
+Bảng Kịch bản kiểm thử chức năng Quản lý nhân viên và Thống kê
+
+STT
+
+Tên kịch bản
+
+Các bước thực hiện
+
+Kết quả mong đợi
+
+1
+
+Thêm nhân viên mới
+
+1. Vào trang Quản lý nhân viên, nhấn "Thêm nhân viên"2. Nhập Họ tên, Tên đăng nhập, Mật khẩu, Email, SĐT, Địa chỉ, chọn Vai trò và Trạng thái3. Nhấn "Lưu"
+
+Hệ thống tạo đồng thời 1 TaiKhoan (mật khẩu mã hóa bằng BCrypt, Vai trò mặc định "Nhân viên" nếu không chọn) và 1 NhanVien liên kết, tự sinh MaSoNhanVien theo định dạng NVxxx (VD: NV001, NV002...) tăng dần theo số lượng nhân viên hiện có
+
+2
+
+Thêm nhân viên thiếu thông tin bắt buộc hoặc trùng tên đăng nhập
+
+1. Trường hợp a: bỏ trống Tên đăng nhập hoặc Mật khẩu, nhấn Lưu2. Trường hợp b: nhập Tên đăng nhập trùng với tài khoản đã có, nhấn Lưu
+
+Trường hợp a: từ chối, báo "Tên đăng nhập và mật khẩu là bắt buộc!"; 
+
+Ttrường hợp b: từ chối, báo "Tên đăng nhập đã tồn tại!"; không tạo tài khoản/nhân viên mới trong cả 2 trường hợp
+
+3
+
+Xem thống kê tổng quan trên Dashboard
+
+1. Vào trang Dashboard2. Đối chiếu số liệu Doanh thu, Tổng số đơn hàng, Tổng số sản phẩm, Tổng số khách hàng, và Danh sách 5 đơn hàng gần nhất
+
+Doanh thu chỉ được tính tổng trên các đơn hàng có trạng thái "Thành công" (loại trừ đơn "Chờ xử lý", "Đang giao", "Đã hủy"); 
+
+Tổng số đơn hàng là đếm trên toàn bộ đơn hàng bất kể trạng thái nào; 
+
+5 đơn hàng gần nhất hiển thị đúng theo thứ tự Ngày đặt giảm dần, kèm đầy đủ tên phương thức thanh toán và trạng thái thanh toán
+
+4
+
+Kiểm tra doanh thu không tính các đơn hàng chưa hoàn tất
+
+1. Ghi lại số Doanh thu hiện tại trên Dashboard2. Tạo/giữ nguyên 1 đơn hàng "Chờ xử lý" hoặc "Đã hủy" có TongTien lớn3. Tải lại Dashboard, so sánh Doanh thu
+
+Doanh thu không thay đổi khi có thêm đơn hàng ở trạng thái "Chờ xử lý"/"Đang giao"/"Đã hủy", chỉ khi đơn hàng chuyển sang "Thành công" thì giá trị đơn đó mới được cộng vào Doanh thu
+
+5
+
+Khách hàng cố truy cập trang/API Thống kê (phân quyền)
+
+1. Thử truy cập trực tiếp URL Dashboard/API Thống kê bằng tài khoản Khách hàng2. Thử gọi lại API trên khi không có Token đăng nhập
+
+Trường hợp 1: hệ thống trả về lỗi 403 Forbidden vì API Thống kê chỉ cho phép vai trò "Admin, NhanVien";
+
+Trường hợp 2: trả về lỗi 401 Unauthorized do thiếu Token xác thực
+
+Bảng 4-6: Bảng Kịch bản kiểm thử chức năng Quản lý nhân viên và Thống kê
+
+KẾT QUẢ THỬ NGHIỆM CÁC KỊCH BẢN 
+
+Bảng kết quả kiểm thử chức năng Đăng ký & Đăng nhập
+
+STT
+
+Tên kịch bản
+
+Kết quả
+
+1
+
+Đăng ký tài khoản mới
+
+Đạt
+
+2
+
+Đăng ký với Tên đăng nhập hoặc Email đã tồn tại
+
+Đạt
+
+3
+
+Đăng nhập bằng Tên đăng nhập/Mật khẩu
+
+Đạt
+
+4
+
+Đăng nhập sai mật khẩu / tài khoản bị khóa
+
+Đạt
+
+5
+
+Đăng nhập bằng Google
+
+Đạt
+
+Bảng 4-7: Bảng kết quả kiểm thử chức năng Đăng ký & Đăng nhập
+
+Bảng kết quả kiểm thử chức năng Tìm kiếm, Thêm vào giỏ hàng  
+
+STT
+
+Tên kịch bản
+
+Kết quả
+
+1
+
+Tìm kiếm và lọc sản phẩm
+
+Đạt
+
+2
+
+Thêm sản phẩm vào Giỏ hàng
+
+Đạt
+
+3
+
+Thêm số lượng vượt quá tồn kho vào giỏ hàng
+
+Đạt
+
+Bảng 4-8: Bảng kết quả kiểm thử chức năng Tìm kiếm, Thêm vào giỏ hàng.
+
+Bảng kết quả kiểm thử chức năng Đặt hàng và Thanh toán
+
+STT
+
+Tên kịch bản
+
+Kết quả
+
+1
+
+Đặt hàng và thanh toán COD
+
+Đạt
+
+2
+
+Đặt hàng và thanh toán online qua VNPAY
+
+Đạt
+
+3
+
+Hủy đơn hàng
+
+Đạt
+
+4
+
+Đánh giá sản phẩm sau khi mua hàng
+
+Đạt
+
+Bảng 4-9: Bảng kết quả kiểm thử chức năng Đặt hàng và Thanh toán
+
+Bảng kết quả kiểm thử chức năng Quản lý danh mục
+
+STT
+
+Tên kịch bản
+
+Kết quả
+
+1
+
+Quản lý Sản phẩm
+
+Đạt
+
+2
+
+Quản lý Loại sản phẩm/ Thương hiệu/ Nhà cung cấp
+
+Đạt
+
+3
+
+Quản lý chương trình khuyến mãi
+
+Đạt
+
+Bảng 4-10: Bảng kết quả kiểm thử chức năng Quản lý danh mục
+
+Bảng kết quả kiểm thử chức năng Xử lý đơn hàng, Nhập hàng 
+
+STT
+
+Tên kịch bản
+
+Kết quả
+
+1
+
+Cập nhật trạng thái đơn hàng theo luồng xử lý bình thường
+
+Đạt
+
+2
+
+Lập phiếu nhập hàng mới (trạng thái "Chờ Xác Nhận")
+
+Đạt
+
+3
+
+Lập phiếu nhập với dữ liệu không hợp lệ
+
+Đạt
+
+4
+
+Phân quyền duyệt phiếu nhập
+
+Đạt
+
+Bảng 4-11: Bảng kết quả kiểm thử chức năng Xử lý đơn hàng, Nhập hàng 
+
+Bảng kết quả kiểm thử chức năng Quản lý nhân viên và Thống kê
+
+STT
+
+Tên kịch bản
+
+Kết quả
+
+1
+
+Thêm nhân viên mới
+
+Đạt
+
+2
+
+Thêm nhân viên thiếu thông tin bắt buộc hoặc trùng tên đăng nhập
+
+Đạt
+
+3
+
+Xem thống kê tổng quan trên Dashboard
+
+Đạt
+
+4
+
+Kiểm tra doanh thu không tính các đơn hàng chưa hoàn tất
+
+Đạt
+
+5
+
+Khách hàng cố truy cập trang/API Thống kê (phân quyền)
+
+Đạt
+
+Bảng 4-12: Bảng kết quả kiểm thử chức năng Quản lý nhân viên và Thống kê
+
+XỬ LÝ CÁC TRƯỜNG HỢP NGOẠI LỆ
+
+Bên cạnh các kịch bản kiểm thử chức năng ở mục 4.1 và 4.2, hệ thống còn được thiết kế để xử lý các trường hợp ngoại lệ (exception) phát sinh trong quá trình vận hành, nhằm đảm bảo tính ổn định, toàn vẹn dữ liệu và trải nghiệm người dùng khi có lỗi xảy ra. Các trường hợp ngoại lệ được phân loại và xử lý theo 4 nhóm chính như sau.
+
+Ngoại lệ do dữ liệu đầu vào không hợp lệ
+
+Ở tầng Backend, mỗi Controller thực hiện kiểm tra tính hợp lệ của dữ liệu trước khi xử lý nghiệp vụ, trả về mã lỗi 400 Bad Request kèm thông báo cụ thể thay vì để hệ thống crash hoặc lưu dữ liệu sai. Ví dụ: giỏ hàng trống khi đặt hàng ("Giỏ hàng của bạn đang trống, không thể tiến hành đặt hàng!"), số lượng sản phẩm nhập/mua vượt tồn kho, phiếu nhập hàng thiếu danh sách sản phẩm hoặc chọn nhà cung cấp không tồn tại, tài khoản nhân viên thiếu thông tin bắt buộc. Ở tầng Frontend, các trường bắt buộc cũng được validate trước khi gửi request, giảm số lượt gọi API không cần thiết.
+
+Ngoại lệ về xác thực và phân quyền
+
+Hệ thống phân biệt rõ hai loại lỗi liên quan đến bảo mật:
+
+401 Unauthorized: khi Token JWT không hợp lệ, đã hết hạn, hoặc không được gửi kèm request (ví dụ khách chưa đăng nhập cố gọi API quản trị).
+
+403 Forbidden: khi Token hợp lệ nhưng tài khoản không đủ quyền hạn (ví dụ Khách hàng cố truy cập API Thống kê, hoặc Nhân viên cố duyệt phiếu nhập — chức năng chỉ dành cho Admin).
+
+Việc phân quyền được thực hiện bằng thuộc tính [Authorize(Roles = "...")] ở từng Controller, đảm bảo kiểm soát truy cập ngay ở tầng API chứ không chỉ ẩn/hiện giao diện ở Frontend.
+
+Ngoại lệ ảnh hưởng đến toàn vẹn dữ liệu (Transaction)
+
+Với các nghiệp vụ có nhiều bước ghi dữ liệu liên quan đến nhau (đặt hàng, trừ tồn kho, xóa giỏ hàng), hệ thống sử dụng Database Transaction của Entity Framework Core (BeginTransactionAsync). Nếu bất kỳ bước nào trong quy trình gặp lỗi (ví dụ sản phẩm bị xóa giữa lúc khách thanh toán, hoặc lỗi kết nối CSDL), toàn bộ thay đổi sẽ được Rollback, tránh tình trạng trừ kho nhưng không tạo được đơn hàng, hoặc tạo đơn hàng nhưng không trừ kho. Cơ chế tương tự cũng áp dụng khi Admin duyệt phiếu nhập hàng để cộng tồn kho.
+
+Ngoại lệ từ dịch vụ/hệ thống bên ngoài
+
+Hệ thống tích hợp nhiều dịch vụ bên thứ ba: cổng thanh toán VNPAY/MoMo, đăng nhập Google OAuth, lưu trữ hình ảnh Cloudinary, và giao hàng nhanh (GHN). Khi các dịch vụ này phản hồi lỗi hoặc gián đoạn kết nối (timeout, callback không hợp lệ, chữ ký giao dịch sai), hệ thống bắt lỗi bằng try-catch ở tầng Controller/Service, trả về mã lỗi 500 Internal Server Error kèm thông điệp mô tả nguyên nhân, đồng thời không để đơn hàng rơi vào trạng thái sai lệch (ví dụ: giao dịch thanh toán thất bại thì đơn hàng vẫn giữ nguyên "Chưa thanh toán" thay vì bị đánh dấu thành công sai).
+
+Nhóm ngoại lệ
+
+Mã lỗi HTTP
+
+Cách xử lý
+
+Dữ liệu đầu vào không hợp lệ (thiếu trường bắt buộc, trùng dữ liệu, vượt tồn kho...)
+
+400 Bad Request
+
+Kiểm tra dữ liệu trước khi xử lý nghiệp vụ, trả về thông báo lỗi cụ thể, không lưu dữ liệu sai vào CSDL
+
+Không tìm thấy dữ liệu yêu cầu (sản phẩm, đơn hàng, nhà cung cấp không tồn tại)
+
+404 Not Found
+
+Kiểm tra sự tồn tại của bản ghi trước khi thao tác, trả về thông báo tương ứng
+
+Chưa xác thực / Token không hợp lệ, hết hạn
+
+401 Unauthorized
+
+Middleware JWT chặn request, yêu cầu đăng nhập lại
+
+Không đủ quyền hạn truy cập (sai vai trò)
+
+403 Forbidden
+
+[Authorize(Roles=...)] kiểm soát theo vai trò ở tầng API, từ chối truy cập dù đã đăng nhập
+
+Lỗi trong quy trình nhiều bước ghi dữ liệu (đặt hàng, duyệt phiếu nhập)
+
+500 Internal Server Error (kèm Rollback)
+
+Sử dụng Database Transaction; nếu phát sinh lỗi ở bất kỳ bước nào, Rollback toàn bộ để đảm bảo toàn vẹn dữ liệu
+
+Lỗi từ dịch vụ bên ngoài (VNPAY, MoMo, Google OAuth, Cloudinary, GHN)
+
+500 Internal Server Error
+
+try-catch bắt lỗi kết nối/callback, trả thông điệp mô tả nguyên nhân, giữ nguyên trạng thái đơn hàng/dữ liệu ở mức an toàn thay vì cập nhật sai
+
+Bảng 4-13: Bảng tổng hợp xử lý các trường hợp ngoại lệ
+
+ KẾT LUẬN 
+
+ KẾT QUẢ ĐỐI CHIẾU VỚI MỤC TIÊU
+
+Xây dựng hệ thống website hoàn chỉnh theo kiến trúc tách biệt Front-end/Back-end: đã triển khai đầy đủ ASP.NET 8 Web API kết hợp React, giao tiếp qua RESTful API, cơ sở dữ liệu SQL Server được thiết kế theo mô hình Code-First của EF Core, đúng định hướng ban đầu.
+
+Số hóa quy trình bán hàng, kho hàng và nhân sự: hệ thống đã hiện thực đầy đủ 3 phân hệ Khách hàng, Nhân viên và Admin với luồng nghiệp vụ khép kín — từ tìm kiếm, đặt hàng, thanh toán, xử lý đơn, đến nhập kho và thống kê doanh thu, được kiểm thử "Đạt" ở phần lớn kịch bản tại Chương 4.
+
+Xây dựng mô hình xử lý hình ảnh qua Cloudinary: luồng React → ASP.NET → Cloudinary → lưu URL vào SQL Server vận hành đúng như thiết kế, đã được xác nhận qua kịch bản kiểm thử Quản lý sản phẩm.
+
+Bảo mật và phân quyền: xác thực bằng JWT, mã hóa mật khẩu BCrypt, phân quyền theo vai trò (Admin/Nhân viên/Khách hàng) ở tầng API — đã được kiểm chứng qua các kịch bản đăng nhập sai, truy cập trái phép API Thống kê.
+
+Tích hợp thanh toán trực tuyến VNPAY: đã hoạt động đúng luồng chuyển hướng và callback cập nhật trạng thái thanh toán.
+
+CÁC VẤN ĐỀ CÒN TỒN ĐỌNG
+
+Bên cạnh những kết quả đạt được, đề tài vẫn còn một số hạn chế cần ghi nhận:
+
+Xử lý đồng thời (Race Condition) khi trừ tồn kho chưa thực sự triệt để: cơ chế kiểm tra tồn kho hiện tại dựa trên Database Transaction kết hợp so sánh giá trị đọc được, nhưng chưa áp dụng cơ chế khóa bi quan (pessimistic locking) hoặc token đồng bộ (concurrency token/RowVersion). Trong điều kiện nhiều người dùng cùng đặt mua sản phẩm cuối cùng ở cùng thời điểm, hệ thống vẫn có khả năng xảy ra tình trạng bán vượt tồn kho.
+
+Chưa có cơ chế ghi log tập trung: hệ thống hiện chỉ trả về thông báo lỗi trực tiếp cho người dùng qua HTTP response, chưa lưu vết (logging) chi tiết các lỗi hệ thống hoặc dịch vụ bên ngoài để phục vụ giám sát, điều tra sự cố về sau.
+
+Giao diện thống kê còn ở mức cơ bản: Dashboard mới dừng ở biểu đồ doanh thu theo ngày/tuần/tháng, chưa hỗ trợ các báo cáo phân tích chuyên sâu hơn (ví dụ dự báo nhu cầu, phân tích hành vi khách hàng). 
+
+MỞ RỘNG (HƯỚNG PHÁT TRIỂN)
+
+Trên cơ sở những kết quả đạt được và các vấn đề còn tồn đọng, đề tài có thể được mở rộng theo các hướng sau:
+
+Hoàn thiện cơ chế chống Race Condition triệt để bằng khóa bi quan (Pessimistic Locking) hoặc Concurrency Token (RowVersion) khi cập nhật tồn kho, đảm bảo tính chính xác tuyệt đối trong môi trường nhiều người dùng truy cập đồng thời.
+
+Bổ sung kịch bản kiểm thử và hoàn thiện tích hợp cho ví điện tử MoMo và dịch vụ giao hàng GHN để đưa vào vận hành thực tế.
+
+Xây dựng hệ thống ghi log tập trung (ví dụ Serilog kết hợp lưu trữ ngoài) để theo dõi lỗi hệ thống và hành vi bất thường.
+
+Phát triển ứng dụng di động (mobile app) cho Khách hàng bên cạnh phiên bản web hiện tại.
+
+Tích hợp gợi ý sản phẩm thông minh (Recommendation System) dựa trên lịch sử mua hàng và hành vi tìm kiếm của khách hàng.
+
+Mở rộng module thống kê, báo cáo theo hướng phân tích dữ liệu chuyên sâu (dự báo doanh thu, phân tích xu hướng bán hàng theo mùa học).
+
+TÀI LIỆU THAM KHẢO
+
+https://vpphongha.vn
+
+https://viblo.asia/p/phan-tich-thiet-ke-he-thong-thong-tin-su-dung-bieu-do-uml-phan-2-0bDM6wpAG2X4
+
+https://topchuyengia.vn/tu-van/sequence-diagram-la-gi
+
+https://www.upbase.vn/vi/blog/so-do-dfd-quan-ly-ban-hang
+
+https://learn.microsoft.com/en-us/aspnet/core/
+
+https://learn.microsoft.com/en-us/ef/core/
+
+https://react.dev/learn 
+
+https://tailwindcss.com/docs 
+
+https://jwt.io/introduction
+
+https://github.com/BcryptNet/bcrypt.net
+
+https://cloudinary.com/documentation
+
+https://sandbox.vnpayment.vn/apis/docs/gioi-thieu/
+
+https://learn.microsoft.com/en-us/sql/sql-server/
+
