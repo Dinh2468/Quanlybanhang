@@ -26,3 +26,14 @@ full.zip
 
 # Secrets
 client_secret_*.json
+
+# Non-code files
+*.docx
+*.txt
+*.pdf
+*.sql
+*.xml
+*.png
+Sơ đồ/
+docx_temp/
+hinh/
