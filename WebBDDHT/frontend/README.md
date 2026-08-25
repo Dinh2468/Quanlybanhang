@@ -1,33 +1,33 @@
-# React + Vite
+# Quanlybanhang - Frontend
 
-Mẫu dự án này cung cấp một bộ cài đặt tối giản để chạy React với Vite, bao gồm HMR (Cập nhật module nóng) và một số quy tắc cấu hình ESLint cơ bản.
+Đây là phần Frontend (Giao diện người dùng) cho dự án Quản lý Bán hàng, được xây dựng bằng thư viện ReactJS kết hợp công cụ build Vite giúp trải nghiệm phát triển nhanh chóng.
 
-Hiện tại, có hai plugin chính thức được hỗ trợ:
+## 📌 Yêu cầu hệ thống
+- [Node.js](https://nodejs.org/) (Khuyến nghị phiên bản LTS mới nhất - từ 18.x trở lên)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) sử dụng [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) sử dụng [SWC](https://swc.rs/)
-
-## Hướng dẫn cài đặt và khởi chạy
+## 🚀 Hướng dẫn cài đặt
 
 1. **Cài đặt các gói thư viện (Dependencies):**
+   Mở terminal, di chuyển vào thư mục `frontend` và chạy lệnh:
    ```bash
    npm install
    ```
 
-2. **Chạy server ở môi trường phát triển (Dev server):**
+2. **Cấu hình môi trường (Nếu có):**
+   Đảm bảo rằng Backend đang chạy để Frontend có thể gửi các yêu cầu API thành công (Thường API sẽ được gọi tới cổng mặc định của Backend, hãy kiểm tra lại file cấu hình API trong thư mục `src/services`).
+
+3. **Chạy server ở môi trường phát triển (Dev server):**
    ```bash
    npm run dev
    ```
+   *Server Frontend mặc định sẽ chạy ở địa chỉ `http://localhost:5173`. Mở trình duyệt và truy cập vào đường dẫn này.*
 
-3. **Đóng gói dự án (Build):**
+4. **Đóng gói dự án (Build for Production):**
+   Khi cần triển khai (deploy), chạy lệnh sau để tạo bản build rút gọn tối ưu nhất:
    ```bash
    npm run build
    ```
 
-## Trình biên dịch React (React Compiler)
-
-React Compiler không được bật mặc định trên mẫu dự án này vì nó có thể ảnh hưởng đến hiệu suất khi phát triển và đóng gói. Để bật nó, vui lòng xem [tài liệu hướng dẫn này](https://react.dev/learn/react-compiler/installation).
-
-## Mở rộng cấu hình ESLint
-
-Nếu bạn đang phát triển một ứng dụng để đưa vào sử dụng thực tế (production), chúng tôi khuyên bạn nên dùng TypeScript với các quy tắc kiểm tra lỗi (lint rules) chặt chẽ. Hãy tham khảo [mẫu TypeScript](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) để biết thêm thông tin về cách tích hợp TypeScript và [`typescript-eslint`](https://typescript-eslint.io) vào dự án của bạn.
+## 👤 Đăng nhập và Test
+- Hệ thống yêu cầu đăng nhập để sử dụng các chức năng chính.
+- Sau khi khởi động thành công cả Frontend và Backend, bạn có thể tự mình **Đăng ký** một tài khoản mới trực tiếp trên giao diện trang web để dùng thử.
