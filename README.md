@@ -5,7 +5,7 @@
 ## 🗂 Cấu trúc thư mục
 - 📂 **`/API_WebBDDHT`**: Chứa toàn bộ mã nguồn Backend (ASP.NET Core 8).
 - 📂 **`/WebBDDHT/frontend`**: Chứa toàn bộ mã nguồn Frontend (ReactJS, Vite).
-- Các file khác ở thư mục gốc bao gồm tài liệu luận văn, kịch bản cơ sở dữ liệu (`.sql`), hình ảnh sơ đồ, v.v.
+
 
 ## 🛠 Công nghệ sử dụng
 - **Backend:** C# ASP.NET Core 8.0, Entity Framework Core, SQL Server.
